@@ -1,6 +1,7 @@
-from pandas import read_csv
 import numpy as np
-from bokeh.plotting import figure, output_file, show
+from bokeh.plotting import figure, output_file
+from pandas import read_csv
+
 
 def get_figure(vacation):
     # # Read in vacation dataset
@@ -26,9 +27,11 @@ def get_figure(vacation):
     p.title.text = "vacation"
     p.grid.grid_line_alpha = 0
     p.xaxis.axis_label = 'Date'
-    p.yaxis.axis_label = 'Price'
+    p.yaxis.axis_label = 'Value'
     p.ygrid.band_fill_color = "olive"
     p.ygrid.band_fill_alpha = 0.1
+    p.width_policy = 'max'
+    p.height_policy = 'max'
 
     # show the results
     return p
@@ -37,13 +40,13 @@ def get_figure(vacation):
 from flask import Flask, render_template
 from bokeh.embed import components
 from bokeh.resources import INLINE
-from bokeh.util.string import encode_utf8
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    vacation = read_csv("df_vacation.csv", parse_dates=True)
+    import_file_name = "df_vacation.csv"
+    vacation = read_csv(import_file_name, parse_dates=True)
     # print(vacation.head())
     fig = get_figure(vacation)
 
@@ -57,7 +60,8 @@ def index():
         'index.html',
         plot_script=script,
         plot_div=div,
-        js_resources=js_resources
+        js_resources=js_resources,
+        file_name= import_file_name
     )
     # return encode_utf8(html)
     return html

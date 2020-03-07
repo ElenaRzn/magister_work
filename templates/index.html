@@ -109,7 +109,7 @@
                     </li>
                 </ul>
                 <div class="text-center m-t-30">
-                    <a href="https://wrappixel.com/templates/monsteradmin/" class="btn btn-danger"> Button1</a>
+                    <a href="https://wrappixel.com/templates/monsteradmin/" class="btn btn-danger"> Save</a>
                 </div>
             </nav>
             <!-- End Sidebar navigation -->
@@ -140,7 +140,7 @@
                 </div>
                 <div class="col-md-6 col-4 align-self-center">
                     <a href="https://wrappixel.com/templates/monsteradmin/"
-                       class="btn pull-right hidden-sm-down btn-success"> Button 2</a>
+                       class="btn pull-right hidden-sm-down btn-success"> Load</a>
                 </div>
             </div>
             <!-- ============================================================== -->
@@ -155,7 +155,7 @@
                 <div class="col-sm-12">
                     <div class="card">
                         <div class="card-block">
-                            <h4 class="card-title">Time Series</h4>
+                            <h4 class="card-title">{{ file_name }}</h4>
                             <div class="flot-chart">
                                     {{ plot_div|indent(4)|safe }}
                             </div>
