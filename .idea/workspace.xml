@@ -1,7 +1,689 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba55c777-f5a4-46bd-bb1e-7d6d10d967cf" name="Default Changelist" comment="" />
+    <list default="true" id="ba55c777-f5a4-46bd-bb1e-7d6d10d967cf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debug.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/images/background/error-bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/images/big/img1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/images/big/img2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/images/big/img4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/images/custom-select.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/images/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/images/logo-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/images/logo-text.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/images/users/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/images/users/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/images/users/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/bootstrap/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/bootstrap/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/bootstrap/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/bootstrap/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/bootstrap/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/bootstrap/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/bootstrap/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/bootstrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/bootstrap/js/tether.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot.tooltip/.bower.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot.tooltip/bower.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot.tooltip/js/excanvas.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot.tooltip/js/jquery.flot.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot.tooltip/js/jquery.flot.tooltip.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot.tooltip/js/jquery.flot.tooltip.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot.tooltip/js/jquery.flot.tooltip.source.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/.bower.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/API.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/CONTRIBUTING.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/FAQ.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/NEWS.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/PLUGINS.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/component.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/ajax/data-eu-gdp-growth-1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/ajax/data-eu-gdp-growth-2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/ajax/data-eu-gdp-growth-3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/ajax/data-eu-gdp-growth-4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/ajax/data-eu-gdp-growth-5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/ajax/data-eu-gdp-growth.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/ajax/data-japan-gdp-growth.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/ajax/data-usa-gdp-growth.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/ajax/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/annotating/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/axes-interacting/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/axes-multiple/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/axes-time-zones/date.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/axes-time-zones/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/axes-time-zones/tz/africa" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/axes-time-zones/tz/antarctica" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/axes-time-zones/tz/asia" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/axes-time-zones/tz/australasia" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/axes-time-zones/tz/backward" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/axes-time-zones/tz/etcetera" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/axes-time-zones/tz/europe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/axes-time-zones/tz/factory" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/axes-time-zones/tz/iso3166.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/axes-time-zones/tz/leapseconds" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/axes-time-zones/tz/northamerica" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/axes-time-zones/tz/pacificnew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/axes-time-zones/tz/solar87" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/axes-time-zones/tz/solar88" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/axes-time-zones/tz/solar89" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/axes-time-zones/tz/southamerica" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/axes-time-zones/tz/systemv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/axes-time-zones/tz/yearistype.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/axes-time-zones/tz/zone.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/axes-time/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/basic-options/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/basic-usage/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/canvas/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/categories/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/examples.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/image/hs-2004-27-a-large-web.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/image/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/interacting/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/navigate/arrow-down.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/navigate/arrow-left.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/navigate/arrow-right.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/navigate/arrow-up.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/navigate/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/percentiles/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/realtime/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/resize/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/selection/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/series-errorbars/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/series-pie/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/series-toggle/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/series-types/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/shared/jquery-ui/jquery-ui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/stacking/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/symbols/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/threshold/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/tracking/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/visitors/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/examples/zooming/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/excanvas.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/excanvas.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/flot.jquery.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/jquery.colorhelpers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/jquery.flot.canvas.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/jquery.flot.categories.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/jquery.flot.crosshair.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/jquery.flot.errorbars.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/jquery.flot.fillbetween.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/jquery.flot.image.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/jquery.flot.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/jquery.flot.navigate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/jquery.flot.pie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/jquery.flot.resize.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/jquery.flot.selection.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/jquery.flot.stack.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/jquery.flot.symbol.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/jquery.flot.threshold.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/jquery.flot.time.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/flot/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/gmaps/gmaps.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/gmaps/gmaps.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/gmaps/gmaps.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/gmaps/jquery.gmaps.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/gmaps/lib/gmaps.controls.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/gmaps/lib/gmaps.core.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/gmaps/lib/gmaps.events.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/gmaps/lib/gmaps.geofences.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/gmaps/lib/gmaps.geometry.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/gmaps/lib/gmaps.layers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/gmaps/lib/gmaps.map_types.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/gmaps/lib/gmaps.markers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/gmaps/lib/gmaps.native_extensions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/gmaps/lib/gmaps.overlays.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/gmaps/lib/gmaps.routes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/gmaps/lib/gmaps.static.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/gmaps/lib/gmaps.streetview.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/gmaps/lib/gmaps.styles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/gmaps/lib/gmaps.utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/jquery/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/sticky-kit-master/dist/sticky-kit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/sticky-kit-master/dist/sticky-kit.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assets/plugins/styleswitcher/jQuery.style.switcher.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/css/animate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/css/colors/blue-dark.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/css/colors/blue.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/css/colors/default-dark.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/css/colors/default.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/css/colors/green-dark.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/css/colors/green.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/css/colors/megna-dark.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/css/colors/megna.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/css/colors/purple-dark.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/css/colors/purple.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/css/colors/red-dark.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/css/colors/red.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/css/icons/simple-line-icons/css/simple-line-icons.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/css/icons/themify-icons/themify-icons.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/css/spinners.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/js/custom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/js/custom.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/js/flot-data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/js/jquery.slimscroll.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/js/js_resources.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/js/sidebarmenu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/js/waves.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages-blank.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages-blank.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages-error-404.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages-error-404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/app.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/colors/blue-dark.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/colors/blue.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/colors/default-dark.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/colors/default.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/colors/green-dark.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/colors/green.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/colors/megna-dark.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/colors/megna.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/colors/purple-dark.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/colors/purple.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/colors/red-dark.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/colors/red.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/grid.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flag-icon.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/ad.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/ae.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/af.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/ag.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/ai.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/al.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/am.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/ao.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/aq.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/ar.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/as.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/at.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/au.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/aw.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/ax.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/az.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/ba.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/bb.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/bd.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/be.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/bf.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/bg.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/bh.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/bi.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/bj.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/bl.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/bm.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/bn.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/bo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/bq.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/br.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/bs.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/bt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/bv.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/bw.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/by.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/bz.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/ca.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/cc.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/cd.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/cf.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/cg.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/ch.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/ci.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/ck.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/cl.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/cm.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/cn.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/co.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/cr.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/cu.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/cv.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/cw.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/cx.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/cy.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/cz.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/de.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/dj.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/dk.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/dm.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/do.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/dz.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/ec.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/ee.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/eg.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/eh.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/er.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/es.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/et.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/fi.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/fj.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/fk.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/fm.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/fo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/fr.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/ga.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/gb.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/gd.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/ge.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/gf.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/gg.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/gh.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/gi.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/gl.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/gm.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/gn.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/gp.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/gq.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/gr.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/gs.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/gt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/gu.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/gw.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/gy.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/hk.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/hm.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/hn.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/hr.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/ht.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/hu.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/id.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/ie.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/il.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/im.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/in.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/io.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/iq.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/ir.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/is.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/it.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/je.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/jm.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/jo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/jp.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/ke.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/kg.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/kh.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/ki.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/km.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/kn.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/kp.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/kr.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/kw.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/ky.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/kz.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/la.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/lb.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/lc.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/li.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/lk.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/lr.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/ls.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/lt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/lu.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/lv.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/ly.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/ma.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/mc.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/md.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/me.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/mf.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/mg.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/mh.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/mk.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/ml.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/mm.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/mn.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/mo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/mp.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/mq.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/mr.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/ms.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/mt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/mu.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/mv.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/mw.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/mx.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/my.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/mz.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/na.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/nc.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/ne.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/nf.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/ng.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/ni.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/nl.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/no.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/np.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/nr.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/nu.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/nz.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/om.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/pa.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/pe.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/pf.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/pg.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/ph.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/pk.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/pl.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/pm.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/pn.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/pr.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/ps.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/pt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/pw.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/py.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/qa.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/re.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/ro.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/rs.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/ru.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/rw.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/sa.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/sb.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/sc.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/sd.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/se.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/sg.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/sh.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/si.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/sj.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/sk.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/sl.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/sm.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/sn.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/so.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/sr.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/ss.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/st.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/sv.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/sx.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/sy.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/sz.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/tc.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/td.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/tf.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/tg.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/th.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/tj.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/tk.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/tl.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/tm.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/tn.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/to.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/tr.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/tt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/tv.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/tw.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/tz.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/ua.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/ug.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/um.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/us.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/uy.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/uz.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/va.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/vc.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/ve.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/vg.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/vi.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/vn.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/vu.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/wf.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/ws.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/ye.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/yt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/za.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/zm.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/flag-icon-css/flags/zw.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/css/font-awesome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/fonts/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/less/animated.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/less/bordered-pulled.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/less/core.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/less/fixed-width.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/less/font-awesome.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/less/icons.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/less/larger.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/less/list.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/less/mixins.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/less/path.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/less/rotated-flipped.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/less/screen-reader.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/less/stacked.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/less/variables.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/.bower.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/HELP-US-OUT.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/bower.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/css/font-awesome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/fonts/fontawesome-webfont-old.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/fonts/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/less/animated.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/less/bordered-pulled.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/less/core.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/less/extras.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/less/fixed-width.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/less/font-awesome.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/less/icons.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/less/larger.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/less/list.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/less/mixins.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/less/path.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/less/rotated-flipped.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/less/spinning.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/less/stacked.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/less/variables.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/scss/_animated.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/scss/_bordered-pulled.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/scss/_core.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/scss/_extras.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/scss/_fixed-width.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/scss/_icons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/scss/_larger.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/scss/_list.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/scss/_mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/scss/_path.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/scss/_rotated-flipped.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/scss/_spinning.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/scss/_stacked.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/scss/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/old/scss/font-awesome.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/scss/_animated.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/scss/_bordered-pulled.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/scss/_core.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/scss/_fixed-width.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/scss/_icons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/scss/_larger.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/scss/_list.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/scss/_mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/scss/_path.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/scss/_rotated-flipped.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/scss/_screen-reader.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/scss/_stacked.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/scss/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/font-awesome/scss/font-awesome.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/linea-icons/fonts/linea-arrows-10.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/linea-icons/fonts/linea-arrows-10.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/linea-icons/fonts/linea-arrows-10.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/linea-icons/fonts/linea-arrows-10.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/linea-icons/fonts/linea-basic-10.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/linea-icons/fonts/linea-basic-10.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/linea-icons/fonts/linea-basic-10.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/linea-icons/fonts/linea-basic-10.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/linea-icons/fonts/linea-basic-elaboration-10.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/linea-icons/fonts/linea-basic-elaboration-10.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/linea-icons/fonts/linea-basic-elaboration-10.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/linea-icons/fonts/linea-basic-elaboration-10.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/linea-icons/fonts/linea-ecommerce-10.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/linea-icons/fonts/linea-ecommerce-10.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/linea-icons/fonts/linea-ecommerce-10.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/linea-icons/fonts/linea-ecommerce-10.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/linea-icons/fonts/linea-music-10.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/linea-icons/fonts/linea-music-10.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/linea-icons/fonts/linea-music-10.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/linea-icons/fonts/linea-music-10.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/linea-icons/fonts/linea-software-10.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/linea-icons/fonts/linea-software-10.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/linea-icons/fonts/linea-software-10.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/linea-icons/fonts/linea-software-10.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/linea-icons/fonts/linea-weather-10.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/linea-icons/fonts/linea-weather-10.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/linea-icons/fonts/linea-weather-10.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/linea-icons/fonts/linea-weather-10.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/linea-icons/linea.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/linea-icons/linea.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/linea-icons/linea.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/material-design-iconic-font/css/material-design-iconic-font.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/material-design-iconic-font/css/material-design-iconic-font.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/material-design-iconic-font/css/materialdesignicons.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/material-design-iconic-font/fonts/Material-Design-Iconic-Font.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/material-design-iconic-font/fonts/Material-Design-Iconic-Font.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/material-design-iconic-font/fonts/Material-Design-Iconic-Font.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/material-design-iconic-font/fonts/Material-Design-Iconic-Font.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/material-design-iconic-font/fonts/Material-Design-Iconic-Font.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/material-design-iconic-font/fonts/materialdesignicons-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/material-design-iconic-font/fonts/materialdesignicons-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/material-design-iconic-font/fonts/materialdesignicons-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/material-design-iconic-font/fonts/materialdesignicons-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/material-design-iconic-font/fonts/materialdesignicons-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/simple-line-icons/css/simple-line-icons.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/simple-line-icons/fonts/Simple-Line-Icons.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/simple-line-icons/fonts/Simple-Line-Icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/simple-line-icons/fonts/Simple-Line-Icons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/simple-line-icons/fonts/Simple-Line-Icons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/simple-line-icons/fonts/Simple-Line-Icons.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/simple-line-icons/less/simple-line-icons.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/simple-line-icons/scss/simple-line-icons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/themify-icons/fonts/themify.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/themify-icons/fonts/themify.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/themify-icons/fonts/themify.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/themify-icons/fonts/themify.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/themify-icons/ie7/ie7.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/themify-icons/ie7/ie7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/themify-icons/themify-icons.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/themify-icons/themify-icons.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/css/weather-icons-core.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/css/weather-icons-variables.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/css/weather-icons-wind.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/css/weather-icons-wind.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/css/weather-icons.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/css/weather-icons.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/fonts/weathericons-regular-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/fonts/weathericons-regular-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/fonts/weathericons-regular-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/fonts/weathericons-regular-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/fonts/weathericons-regular-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/css/variables-beaufort.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/css/variables-day.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/css/variables-direction.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/css/variables-misc.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/css/variables-moon.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/css/variables-neutral.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/css/variables-night.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/css/variables-time.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/css/variables-wind-names.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/icon-classes/classes-beaufort.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/icon-classes/classes-day.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/icon-classes/classes-direction.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/icon-classes/classes-misc.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/icon-classes/classes-moon-aliases.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/icon-classes/classes-moon.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/icon-classes/classes-neutral.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/icon-classes/classes-night.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/icon-classes/classes-time.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/icon-classes/classes-wind-aliases.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/icon-classes/classes-wind-degrees.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/icon-classes/classes-wind.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/icon-variables/variables-beaufort.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/icon-variables/variables-day.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/icon-variables/variables-direction.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/icon-variables/variables-misc.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/icon-variables/variables-moon.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/icon-variables/variables-neutral.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/icon-variables/variables-night.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/icon-variables/variables-time.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/icon-variables/variables-wind-names.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/mappings/wi-forecast-io.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/mappings/wi-owm.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/mappings/wi-wmo4680.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/mappings/wi-yahoo.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/weather-icons-classes.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/weather-icons-core.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/weather-icons-variables.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/weather-icons-wind.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/weather-icons-wind.min.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/weather-icons.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/less/weather-icons.min.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/sass/icon-classes/classes-beaufort.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/sass/icon-classes/classes-day.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/sass/icon-classes/classes-direction.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/sass/icon-classes/classes-misc.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/sass/icon-classes/classes-moon-aliases.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/sass/icon-classes/classes-moon.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/sass/icon-classes/classes-neutral.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/sass/icon-classes/classes-night.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/sass/icon-classes/classes-time.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/sass/icon-classes/classes-wind-aliases.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/sass/icon-classes/classes-wind-degrees.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/sass/icon-classes/classes-wind.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/sass/icon-variables/variables-beaufort.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/sass/icon-variables/variables-day.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/sass/icon-variables/variables-direction.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/sass/icon-variables/variables-misc.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/sass/icon-variables/variables-moon.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/sass/icon-variables/variables-neutral.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/sass/icon-variables/variables-night.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/sass/icon-variables/variables-time.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/sass/icon-variables/variables-wind-names.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/sass/mappings/wi-forecast-io.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/sass/mappings/wi-owm.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/sass/mappings/wi-wmo4680.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/sass/mappings/wi-yahoo.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/sass/weather-icons-classes.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/sass/weather-icons-core.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/sass/weather-icons-variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/sass/weather-icons-wind.min.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/sass/weather-icons-wind.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/sass/weather-icons.min.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/icons/weather-icons/sass/weather-icons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/pages.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/responsive.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/sidebar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/style.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/variable.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scss/widgets.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/styles/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/table-basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/table-basic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ts_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/ts_test.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +697,17 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
   <component name="ProjectId" id="1YX9u0zjUdsj1cc2lqpJxljyPDI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -24,6 +716,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
   </component>
   <component name="RecentsManager">
@@ -176,14 +869,14 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="254" y="89" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860@0.0.1600.860" timestamp="1583584463174" />
-    <state x="764" y="211" key="#xdebugger.evaluate" timestamp="1583600349746">
+    <state x="764" y="211" key="#xdebugger.evaluate" timestamp="1583604434770">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="764" y="211" key="#xdebugger.evaluate/0.0.1600.860@0.0.1600.860" timestamp="1583600349746" />
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1583520128273">
+    <state x="764" y="211" key="#xdebugger.evaluate/0.0.1600.860@0.0.1600.860" timestamp="1583604434770" />
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1583603069281">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1583520128273" />
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1583603069281" />
     <state x="534" y="196" key="EnvironmentVariablesDialog" timestamp="1583584458923">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -192,62 +885,74 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="189" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1583517786139" />
-    <state width="1579" height="276" key="GridCell.Tab.0.bottom" timestamp="1583600002407">
+    <state width="1579" height="276" key="GridCell.Tab.0.bottom" timestamp="1583606849391">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="276" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1583600002407" />
-    <state width="1579" height="276" key="GridCell.Tab.0.center" timestamp="1583600002407">
+    <state width="1579" height="276" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1583606849391" />
+    <state width="1579" height="276" key="GridCell.Tab.0.center" timestamp="1583606849391">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="276" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1583600002407" />
-    <state width="1579" height="276" key="GridCell.Tab.0.left" timestamp="1583600002406">
+    <state width="1579" height="276" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1583606849391" />
+    <state width="1579" height="276" key="GridCell.Tab.0.left" timestamp="1583606849390">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="276" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1583600002406" />
-    <state width="1579" height="276" key="GridCell.Tab.0.right" timestamp="1583600002407">
+    <state width="1579" height="276" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1583606849390" />
+    <state width="1579" height="276" key="GridCell.Tab.0.right" timestamp="1583606849391">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="276" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1583600002407" />
-    <state width="1579" height="276" key="GridCell.Tab.1.bottom" timestamp="1583600013581">
+    <state width="1579" height="276" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1583606849391" />
+    <state width="1579" height="276" key="GridCell.Tab.1.bottom" timestamp="1583606849392">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="276" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1583600013581" />
-    <state width="1579" height="276" key="GridCell.Tab.1.center" timestamp="1583600013581">
+    <state width="1579" height="276" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1583606849392" />
+    <state width="1579" height="276" key="GridCell.Tab.1.center" timestamp="1583606849392">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="276" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1583600013581" />
-    <state width="1579" height="276" key="GridCell.Tab.1.left" timestamp="1583600013580">
+    <state width="1579" height="276" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1583606849392" />
+    <state width="1579" height="276" key="GridCell.Tab.1.left" timestamp="1583606849391">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="276" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1583600013580" />
-    <state width="1579" height="276" key="GridCell.Tab.1.right" timestamp="1583600013581">
+    <state width="1579" height="276" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1583606849391" />
+    <state width="1579" height="276" key="GridCell.Tab.1.right" timestamp="1583606849392">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="276" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1583600013581" />
+    <state width="1579" height="276" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1583606849392" />
     <state width="808" height="438" key="XDebugger.FullValuePopup" timestamp="1583518107393">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="808" height="438" key="XDebugger.FullValuePopup/0.0.1600.860@0.0.1600.860" timestamp="1583518107393" />
-    <state x="508" y="259" key="com.intellij.ide.util.TipDialog" timestamp="1583588803954">
+    <state x="508" y="259" key="com.intellij.ide.util.TipDialog" timestamp="1583606873883">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="508" y="259" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1583588803954" />
+    <state x="508" y="259" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1583606873883" />
+    <state x="611" y="350" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583609345839">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="611" y="350" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860@0.0.1600.860" timestamp="1583609345839" />
     <state x="373" y="170" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1583599985933">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="373" y="170" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1600.860@0.0.1600.860" timestamp="1583599985933" />
+    <state x="507" y="186" width="586" height="488" key="find.popup" timestamp="1583609103211">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="507" y="186" width="586" height="488" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1583609103211" />
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1583606192303">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1583606192303" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/ts_test.py</url>
-          <line>64</line>
+          <line>66</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/ts_test.py</url>
-          <line>60</line>
+          <line>61</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">

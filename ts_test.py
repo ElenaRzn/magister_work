@@ -54,11 +54,13 @@ def index():
     # render template
     script, div = components(fig)
     html = render_template(
-        'index.html',
-        plot_script=script,
-        plot_div=div
+        'index.html'
+        # plot_script=script,
+        # plot_div=div,
+        # js_resources=js_resources
     )
-    return encode_utf8(html)
+    # return encode_utf8(html)
+    return html
 
 @app.route('/bokeh')
 def bokeh():
