@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../static/assets/images/favicon.png">
-    <title>Monster Admin Template - The Most Complete & Trusted Bootstrap 4 Admin Template</title>
+    <title>Time Series Analysis With Fractal Technology</title>
     <!-- Bootstrap Core CSS -->
     <link href="../static/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -56,12 +56,6 @@
 
                     </b>
                     <!--End Logo icon -->
-                    <!-- Logo text -->
-                    <span>
-                            <!-- dark Logo text -->
-                            <img src="../static/assets/images/logo-text.png" alt="homepage" class="dark-logo"/>
-                        </span>
-                </a>
             </div>
             <!-- ============================================================== -->
             <!-- End Logo -->
@@ -115,7 +109,7 @@
                     </li>
                 </ul>
                 <div class="text-center m-t-30">
-                    <a href="https://wrappixel.com/templates/monsteradmin/" class="btn btn-danger"> Upgrade to Pro</a>
+                    <a href="https://wrappixel.com/templates/monsteradmin/" class="btn btn-danger"> Button1</a>
                 </div>
             </nav>
             <!-- End Sidebar navigation -->
@@ -146,7 +140,7 @@
                 </div>
                 <div class="col-md-6 col-4 align-self-center">
                     <a href="https://wrappixel.com/templates/monsteradmin/"
-                       class="btn pull-right hidden-sm-down btn-success"> Upgrade to Pro</a>
+                       class="btn pull-right hidden-sm-down btn-success"> Button 2</a>
                 </div>
             </div>
             <!-- ============================================================== -->
@@ -163,6 +157,7 @@
                         <div class="card-block">
                             <h4 class="card-title">Time Series</h4>
                             <div class="flot-chart">
+                                    {{ plot_div|indent(4)|safe }}
                             </div>
                         </div>
                     </div>
@@ -179,7 +174,7 @@
             <!-- footer -->
             <!-- ============================================================== -->
             <footer class="footer text-center">
-                © 2020 Popova Elena, RSREU
+                © 2020 Popova Elena
             </footer>
             <!-- ============================================================== -->
             <!-- End footer -->
@@ -220,6 +215,8 @@
     <!-- Style switcher -->
     <!-- ============================================================== -->
     <script src="../static/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
+    {{ js_resources|indent(4)|safe }}
+    {{ plot_script|indent(4)|safe }}
 </body>
 
 </html>
