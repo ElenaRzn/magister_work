@@ -44,7 +44,7 @@ from bokeh.resources import INLINE
 
 app = Flask(__name__)
 
-@app.route('/index')
+@app.route('/index2')
 def index():
     import_file_name = "df_vacation.csv"
     vacation = read_csv(import_file_name, parse_dates=True)
@@ -67,8 +67,8 @@ def index():
     # return encode_utf8(html)
     return html
 
-@app.route('/decompose')
-def decompose():
+@app.route('/decompose2')
+def decompose2():
     import_file_name = "df_vacation.csv"
     vacation = read_csv(import_file_name, parse_dates=True)
     ts1 = vacation['Num_Search_Vacation']
@@ -89,7 +89,7 @@ def decompose():
     script3, div_resid = components(resid)
     script4, div_observed = components(observed)
     html = render_template(
-        'debug.html',
+        'stationary.html',
         plot_script1=script1,
         plot_script2=script2,
         plot_script3=script3,

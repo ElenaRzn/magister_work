@@ -92,7 +92,7 @@
             <nav class="sidebar-nav">
                 <ul id="sidebarnav">
                     <li>
-                        <a href="index.html" class="waves-effect"><i class="fa fa-clock-o m-r-10"
+                        <a href="{{ url_for('index') }}" class="waves-effect"><i class="fa fa-clock-o m-r-10"
                                                                      aria-hidden="true"></i>Dashboard</a>
                     </li>
                     <li>
@@ -100,7 +100,7 @@
                                                                            aria-hidden="true"></i>Data</a>
                     </li>
                     <li>
-                        <a href="pages-blank.html" class="waves-effect"><i class="fa fa-info-circle m-r-10"
+                        <a href="{{ url_for('stationary') }}" class="waves-effect"><i class="fa fa-info-circle m-r-10"
                                                                            aria-hidden="true"></i>Stationarity</a>
                     </li>
                     <li>
@@ -208,11 +208,11 @@
     <script src="../static/assets/plugins/bootstrap/js/tether.min.js"></script>
     <script src="../static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <!-- slimscrollbar scrollbar JavaScript -->
-    <script src="js/jquery.slimscroll.js"></script>
+    <script src="static/js/jquery.slimscroll.js"></script>
     <!--Wave Effects -->
-    <script src="js/waves.js"></script>
+    <script src="static/js/waves.js"></script>
     <!--Menu sidebar -->
-    <script src="js/sidebarmenu.js"></script>
+    <script src="static/js/sidebarmenu.js"></script>
     <!--stickey kit -->
     <script src="../static/assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
     <!--Custom JavaScript -->
@@ -229,10 +229,10 @@
     <!-- ============================================================== -->
     <script src="../static/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
     {{ js_resources|indent(4)|safe }}
-    {{ plot_script1|indent(4)|safe }}
-    {{ plot_script2|indent(4)|safe }}
-    {{ plot_script3|indent(4)|safe }}
-    {{ plot_script4|indent(4)|safe }}
+    {{ script_trend|indent(4)|safe }}
+    {{ script_seasonal|indent(4)|safe }}
+    {{ script_resid|indent(4)|safe }}
+    {{ script_observed|indent(4)|safe }}
 </body>
 
 </html>
