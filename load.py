@@ -10,7 +10,9 @@ from pandas import read_csv
  Чтение из .csv файла.
  import_file_name - 
 '''
-def load(import_file_name, info_column, date_column):
+
+
+def load_csv(import_file_name, info_column, date_column):
     time_series = read_csv(import_file_name, parse_dates=True)
     fig = get_figure(np.array(time_series[info_column]), np.array(time_series[date_column]))
     return fig

@@ -14,9 +14,9 @@
     <!-- Bootstrap Core CSS -->
     <link href="../static/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
     <!-- You can change the theme colors from here -->
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/colors/blue.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/colors/blue.css') }}">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -142,10 +142,6 @@
                         <li class="breadcrumb-item active">Dashboard</li>
                     </ol>
                 </div>
-                <div class="col-md-6 col-4 align-self-center">
-                    <a href="https://wrappixel.com/templates/monsteradmin/"
-                       class="btn pull-right hidden-sm-down btn-success"> Load</a>
-                </div>
             </div>
             <!-- ============================================================== -->
             <!-- End Bread crumb and right sidebar toggle -->
@@ -160,8 +156,20 @@
                     <div class="card">
                         <div class="card-block">
                             <div class="flot-chart">
-                                    Welcome to the Time Series Analyser!
-                                    To start your work load the file...
+                                Welcome to the Time Series Analyser!
+                                To start your work load the file...
+                                <form class="app-search p-l-20 p-t-20" method="post" action="/load">
+                                    <b>Enter .csv file name</b>
+                                    <input type="text" name="file" class="form-control" placeholder="File name...">
+                                    <b>Enter data column name</b>
+                                    <input type="text" name="data" class="form-control p-t-20" placeholder="Data column...">
+                                    <b>Enter date column name</b>
+                                    <input type="text" name="date" class="form-control p-t-20" placeholder="Date column...">
+                                    <div class="col-md-6 col-4 align-self-center">
+                                        <button class="btn pull-right hidden-sm-down btn-success" type="submit">Load</button>
+                                    </div>
+                                </form>
+
                             </div>
                         </div>
                     </div>
@@ -199,11 +207,11 @@
     <script src="../static/assets/plugins/bootstrap/js/tether.min.js"></script>
     <script src="../static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <!-- slimscrollbar scrollbar JavaScript -->
-    <script src="js/jquery.slimscroll.js"></script>
+    <script src="static/js/jquery.slimscroll.js"></script>
     <!--Wave Effects -->
-    <script src="js/waves.js"></script>
+    <script src="static/js/waves.js"></script>
     <!--Menu sidebar -->
-    <script src="js/sidebarmenu.js"></script>
+    <script src="static/js/sidebarmenu.js"></script>
     <!--stickey kit -->
     <script src="../static/assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
     <!--Custom JavaScript -->
@@ -214,11 +222,12 @@
     <!-- Flot Charts JavaScript -->
     <script src="../static/assets/plugins/flot/jquery.flot.js"></script>
     <script src="../static/assets/plugins/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
-    <script src="../static/static/js/flot-data.js"></script>
+    <script src="../static/js/flot-data.js"></script>
     <!-- ============================================================== -->
     <!-- Style switcher -->
     <!-- ============================================================== -->
     <script src="../static/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
+</div>
 </body>
 
 </html>

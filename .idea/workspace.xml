@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba55c777-f5a4-46bd-bb1e-7d6d10d967cf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/front_controller.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/load.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/debug.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/debug.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/front_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/load.py" beforeDir="false" afterPath="$PROJECT_DIR$/load.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ts_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/ts_test.py" afterDir="false" />
     </list>
@@ -191,24 +190,57 @@
       <option name="presentableId" value="Default" />
       <updated>1583078290526</updated>
     </task>
+    <task id="LOCAL-00001" summary="before refactoring">
+      <created>1585588666305</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1585588666305</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="before refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="before refactoring" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="361" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585582653388">
+    <state x="361" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585598748506">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="361" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860@0.0.1600.860" timestamp="1585582653388" />
-    <state x="460" y="280" width="790" height="580" key="#xdebugger.evaluate" timestamp="1583777545626">
+    <state x="361" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860@0.0.1600.860" timestamp="1585598748506" />
+    <state x="460" y="280" width="790" height="580" key="#xdebugger.evaluate" timestamp="1585648355782">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="460" y="280" width="790" height="580" key="#xdebugger.evaluate/0.0.1600.860@0.0.1600.860" timestamp="1583777545626" />
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1585579858267">
+    <state x="460" y="280" width="790" height="580" key="#xdebugger.evaluate/0.0.1600.860@0.0.1600.860" timestamp="1585648355782" />
+    <state x="467" y="29" key="CommitChangelistDialog2" timestamp="1585588664422">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1585579858267" />
+    <state x="467" y="29" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1585588664422" />
+    <state width="464" height="466" key="DebuggerActiveHint" timestamp="1585648332155">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="464" height="466" key="DebuggerActiveHint/0.0.1600.860@0.0.1600.860" timestamp="1585648332155" />
+    <state x="92" y="92" width="1416" height="676" maximized="true" key="DiffContextDialog" timestamp="1585648558706">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="92" y="92" width="1416" height="676" maximized="true" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1585648558706" />
     <state x="534" y="196" key="EnvironmentVariablesDialog" timestamp="1583584458923">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -217,46 +249,50 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="189" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1583517786139" />
-    <state width="1579" height="303" key="GridCell.Tab.0.bottom" timestamp="1585588643231">
+    <state width="1579" height="276" key="GridCell.Tab.0.bottom" timestamp="1585648418075">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="303" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1585588643231" />
-    <state width="1579" height="303" key="GridCell.Tab.0.center" timestamp="1585588643230">
+    <state width="1579" height="276" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1585648418075" />
+    <state width="1579" height="276" key="GridCell.Tab.0.center" timestamp="1585648418075">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="303" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1585588643230" />
-    <state width="1579" height="303" key="GridCell.Tab.0.left" timestamp="1585588643230">
+    <state width="1579" height="276" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1585648418075" />
+    <state width="1579" height="276" key="GridCell.Tab.0.left" timestamp="1585648418075">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="303" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1585588643230" />
-    <state width="1579" height="303" key="GridCell.Tab.0.right" timestamp="1585588643231">
+    <state width="1579" height="276" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1585648418075" />
+    <state width="1579" height="276" key="GridCell.Tab.0.right" timestamp="1585648418075">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="303" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1585588643231" />
-    <state width="1579" height="276" key="GridCell.Tab.1.bottom" timestamp="1585586176403">
+    <state width="1579" height="276" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1585648418075" />
+    <state width="1579" height="276" key="GridCell.Tab.1.bottom" timestamp="1585648418076">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="276" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1585586176403" />
-    <state width="1579" height="276" key="GridCell.Tab.1.center" timestamp="1585586176402">
+    <state width="1579" height="276" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1585648418076" />
+    <state width="1579" height="276" key="GridCell.Tab.1.center" timestamp="1585648418075">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="276" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1585586176402" />
-    <state width="1579" height="276" key="GridCell.Tab.1.left" timestamp="1585586176402">
+    <state width="1579" height="276" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1585648418075" />
+    <state width="1579" height="276" key="GridCell.Tab.1.left" timestamp="1585648418075">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="276" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1585586176402" />
-    <state width="1579" height="276" key="GridCell.Tab.1.right" timestamp="1585586176402">
+    <state width="1579" height="276" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1585648418075" />
+    <state width="1579" height="276" key="GridCell.Tab.1.right" timestamp="1585648418076">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="276" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1585586176402" />
+    <state width="1579" height="276" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1585648418076" />
+    <state x="392" y="155" key="Vcs.Push.Dialog.v2" timestamp="1585588667856">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="392" y="155" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1585588667856" />
     <state width="808" height="438" key="XDebugger.FullValuePopup" timestamp="1583518107393">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="808" height="438" key="XDebugger.FullValuePopup/0.0.1600.860@0.0.1600.860" timestamp="1583518107393" />
-    <state x="508" y="259" key="com.intellij.ide.util.TipDialog" timestamp="1585579767528">
+    <state x="508" y="259" key="com.intellij.ide.util.TipDialog" timestamp="1585645857107">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="508" y="259" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1585579767528" />
+    <state x="508" y="259" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1585645857107" />
     <state x="611" y="350" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583614236610">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -265,42 +301,62 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="373" y="170" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1600.860@0.0.1600.860" timestamp="1583599985933" />
-    <state x="507" y="186" width="586" height="488" key="find.popup" timestamp="1583615285347">
+    <state x="507" y="186" width="586" height="488" key="find.popup" timestamp="1585647972746">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="507" y="186" width="586" height="488" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1583615285347" />
-    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1583606192303">
+    <state x="507" y="186" width="586" height="488" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1585647972746" />
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1585647955715">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1583606192303" />
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1585647955715" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/ts_test.py</url>
-          <line>84</line>
+          <line>83</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/ts_test.py</url>
-          <line>77</line>
+          <line>76</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/ts_test.py</url>
-          <line>91</line>
+          <line>90</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/ts_test.py</url>
-          <line>72</line>
+          <line>71</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/load.py</url>
+          <line>15</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ts_test.py</url>
+          <line>48</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ts_test.py</url>
+          <line>67</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/load.py</url>
+          <line>17</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/front_controller.py</url>
-          <line>7</line>
-          <option name="timeStamp" value="17" />
+          <line>28</line>
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

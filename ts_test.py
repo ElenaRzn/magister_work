@@ -9,7 +9,6 @@ def get_figure(vacation):
     # # Read in vacation dataset
     # vacation = read_csv("df_vacation.csv", parse_dates=True)
     # print(vacation.head())
-
     # ------------------------------------------
     aapl = np.array(vacation['Num_Search_Vacation'])
     aapl_dates = np.array(vacation['Month'], dtype=np.datetime64)
