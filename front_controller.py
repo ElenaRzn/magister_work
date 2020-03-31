@@ -4,8 +4,12 @@ from bokeh.resources import INLINE
 from flask import Flask, render_template, redirect, url_for, request
 from pandas.io.parsers import read_csv
 from statsmodels.tsa.seasonal import seasonal_decompose
+from statsmodels.tsa.stattools import adfuller
+# from statsmodels.graphics.tsaplots import plot_acf
+# from statsmodels.graphics.tsaplots import plot_pacf
+import statsmodels.tsa.stattools
 
-from figure_converter import get_figure, get_single_figure
+from figure_converter import get_figure, get_single_figure, get_single_chart
 
 app = Flask(__name__)
 
@@ -86,6 +90,45 @@ def decompose():
         plot_observed=div_observed,
         js_resources=js_resources,
         file_name="test"
+    )
+    return html
+
+
+@app.route('/model', methods=['GET'])
+def model():
+    if time_series is None:
+        return redirect(url_for('home'))
+
+    # Dickey-Fuller Test
+    ts_result = adfuller(time_series[information_column])
+    # Autocorrelation
+    coefficient = time_series[information_column].autocorr()
+
+    # Plot ACF to visualize the autocorrelation
+
+    plt_acf = statsmodels.tsa.stattools.acf(time_series[information_column], nlags=12)
+    acf = get_single_chart(plt_acf, "ACF")
+    js_acf, div_acf = components(acf)
+
+    # Plot Partial autocorrelation function (PACF)
+    plt_pacf = statsmodels.tsa.stattools.pacf(time_series[information_column], nlags=12)
+    pacf = get_single_chart(plt_pacf, "PACF")
+    js_pacf, div_pacf = components(pacf)
+
+    # grab the static resources
+    js_resources = INLINE.render_js()
+
+    html = render_template(
+        'model.html',
+        js_resources=js_resources,
+        dft_statistic_result=ts_result[0],
+        dft_p_result=ts_result[1],
+        dft_critical_result=ts_result[4],
+        autocorrelation = coefficient,
+        plot_acf=div_acf,
+        plot_pacf=div_pacf,
+        script_acf=js_acf,
+        script_pacf=js_pacf
     )
     return html
 

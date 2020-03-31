@@ -68,3 +68,27 @@ def get_single_figure(data, text):
 
     # show the results
     return p
+
+
+def get_single_chart(data, text):
+    # output to static HTML file
+    output_file("vacation.html", title="vacation.py example")
+
+    # create a new plot with a a datetime axis type
+    p = figure(width=150, height=250)
+
+    # add renderers
+    p.vbar(x=list(range(0, data.size)), width=0.05, bottom=0, top=data, color="firebrick")
+
+    # NEW: customize by setting attributes
+    p.title.text = text
+    p.grid.grid_line_alpha = 0
+    p.xaxis.axis_label = 'Lags'
+    p.yaxis.axis_label = 'Value'
+    p.ygrid.band_fill_color = "olive"
+    p.ygrid.band_fill_alpha = 0.1
+    p.width_policy = 'max'
+    p.height_policy = 'max'
+
+    # show the results
+    return p

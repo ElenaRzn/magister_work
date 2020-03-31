@@ -14,9 +14,9 @@
     <!-- Bootstrap Core CSS -->
     <link href="../static/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
     <!-- You can change the theme colors from here -->
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/colors/blue.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/colors/blue.css') }}">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -47,7 +47,7 @@
             <!-- Logo -->
             <!-- ============================================================== -->
             <div class="navbar-header">
-                <a class="navbar-brand" href="index.html"></a>
+                <a class="navbar-brand" href="index.html">
                     <!-- Logo icon -->
                     <b>
                         <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
@@ -93,7 +93,7 @@
                 <ul id="sidebarnav">
                     <li>
                         <a href="{{ url_for('index') }}" class="waves-effect"><i class="fa fa-clock-o m-r-10"
-                                                                     aria-hidden="true"></i>Dashboard</a>
+                                                                                 aria-hidden="true"></i>Dashboard</a>
                     </li>
                     <li>
                         <a href="table-basic.html" class="waves-effect"><i class="fa fa-table m-r-10"
@@ -101,15 +101,15 @@
                     </li>
                     <li>
                         <a href="{{ url_for('decompose') }}" class="waves-effect"><i class="fa fa-info-circle m-r-10"
-                                                                           aria-hidden="true"></i>Decompose</a>
+                                                                                     aria-hidden="true"></i>Decompose</a>
                     </li>
                     <li>
                         <a href="pages-error-404.html" class="waves-effect"><i class="fa fa-snowflake-o m-r-10"
                                                                                aria-hidden="true"></i>Fractal</a>
                     </li>
                     <li>
-                        <a href="{{ url_for('model') }}" class="waves-effect"><i class="fa fa-columns m-r-10"
-                                                                               aria-hidden="true"></i>Model</a>
+                        <a href="{{ url_for('index') }}" class="waves-effect"><i class="fa fa-columns m-r-10"
+                                                                                 aria-hidden="true"></i>Model</a>
                     </li>
                 </ul>
                 <div class="text-center m-t-30">
@@ -142,6 +142,10 @@
                         <li class="breadcrumb-item active">Dashboard</li>
                     </ol>
                 </div>
+                <div class="col-md-6 col-4 align-self-center">
+                    <a href="https://wrappixel.com/templates/monsteradmin/"
+                       class="btn pull-right hidden-sm-down btn-success"> Load</a>
+                </div>
             </div>
             <!-- ============================================================== -->
             <!-- End Bread crumb and right sidebar toggle -->
@@ -155,9 +159,25 @@
                 <div class="col-sm-12">
                     <div class="card">
                         <div class="card-block">
-                            <h4 class="card-title">{{ file_name }}</h4>
-                            <div class="flot-chart">
-                                    {{ plot_div|indent(4)|safe }}
+                            <h3 class="card-title">Dickey-Fuller Test</h3>
+                            <h4>Test statistic</h4>
+                            <div>
+                                {{ dft_statistic_result }}
+                            </div>
+                            <h4>p-value</h4>
+                            <div>
+                                {{ dft_p_result }}
+                            </div>
+                            <h4>Critical values for the test statistic at 1 %, 5 %, and 10 % levels</h4>
+                            <div>
+                                {{ dft_critical_result }}
+                            </div>
+                            <h3 class="card-title">Autocorrelation: {{ autocorrelation }}</h3>
+                            <div>
+                                {{ plot_acf|indent(4)|safe }}
+                            </div>
+                            <div >
+                                {{ plot_pacf|indent(4)|safe }}
                             </div>
                         </div>
                     </div>
@@ -216,7 +236,8 @@
     <!-- ============================================================== -->
     <script src="../static/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
     {{ js_resources|indent(4)|safe }}
-    {{ plot_script|indent(4)|safe }}
+    {{ script_acf|indent(4)|safe }}
+    {{ script_pacf|indent(4)|safe }}
 </div>
 </body>
 
