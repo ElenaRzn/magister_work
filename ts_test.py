@@ -89,7 +89,7 @@ def decompose2():
     script3, div_resid = components(resid)
     script4, div_observed = components(observed)
     html = render_template(
-        'stationary.html',
+        'decompose.html',
         plot_script1=script1,
         plot_script2=script2,
         plot_script3=script3,

@@ -55,8 +55,8 @@ def load():
     return redirect(url_for('index'))
 
 
-@app.route('/stationary', methods=['GET'])
-def stationary():
+@app.route('/decompose', methods=['GET'])
+def decompose():
     if time_series is None:
         return redirect(url_for('home'))
     result = seasonal_decompose(time_series[information_column], model='additive', freq=12)
@@ -75,7 +75,7 @@ def stationary():
     js_resid, div_resid = components(resid)
     js_observed, div_observed = components(observed)
     html = render_template(
-        'stationary.html',
+        'decompose.html',
         script_trend=js_trend,
         script_seasonal=js_seasonal,
         script_resid=js_resid,

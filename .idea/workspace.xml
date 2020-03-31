@@ -4,10 +4,9 @@
     <list default="true" id="ba55c777-f5a4-46bd-bb1e-7d6d10d967cf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/front_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/load.py" beforeDir="false" afterPath="$PROJECT_DIR$/figure_converter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/debug.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/stationary.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/stationary.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/decompose.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ts_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/ts_test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -205,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585648574647</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Decompose dorks!">
+      <created>1585663213396</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1585663213396</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -227,7 +233,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="before refactoring" />
     <MESSAGE value="not working" />
-    <option name="LAST_COMMIT_MESSAGE" value="not working" />
+    <MESSAGE value="Decompose dorks!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Decompose dorks!" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585598748506">
@@ -238,10 +245,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="460" y="280" width="790" height="580" key="#xdebugger.evaluate/0.0.1600.860@0.0.1600.860" timestamp="1585662282354" />
-    <state x="467" y="29" key="CommitChangelistDialog2" timestamp="1585648573115">
+    <state x="467" y="29" key="CommitChangelistDialog2" timestamp="1585663211462">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="467" y="29" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1585648573115" />
+    <state x="467" y="29" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1585663211462" />
     <state width="464" height="466" key="DebuggerActiveHint" timestamp="1585648332155">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -258,22 +265,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="189" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1585649546218" />
-    <state width="1579" height="239" key="GridCell.Tab.0.bottom" timestamp="1585663144033">
+    <state width="1579" height="239" key="GridCell.Tab.0.bottom" timestamp="1585663622757">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="239" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1585663144033" />
-    <state width="1579" height="239" key="GridCell.Tab.0.center" timestamp="1585663144032">
+    <state width="1579" height="239" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1585663622757" />
+    <state width="1579" height="239" key="GridCell.Tab.0.center" timestamp="1585663622757">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="239" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1585663144032" />
-    <state width="1579" height="239" key="GridCell.Tab.0.left" timestamp="1585663144032">
+    <state width="1579" height="239" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1585663622757" />
+    <state width="1579" height="239" key="GridCell.Tab.0.left" timestamp="1585663622757">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="239" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1585663144032" />
-    <state width="1579" height="239" key="GridCell.Tab.0.right" timestamp="1585663144033">
+    <state width="1579" height="239" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1585663622757" />
+    <state width="1579" height="239" key="GridCell.Tab.0.right" timestamp="1585663622757">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="239" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1585663144033" />
+    <state width="1579" height="239" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1585663622757" />
     <state width="1579" height="276" key="GridCell.Tab.1.bottom" timestamp="1585662302149">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -290,10 +297,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1579" height="276" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1585662302149" />
-    <state x="392" y="155" key="Vcs.Push.Dialog.v2" timestamp="1585648575975">
+    <state x="392" y="155" key="Vcs.Push.Dialog.v2" timestamp="1585663215058">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="155" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1585648575975" />
+    <state x="392" y="155" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1585663215058" />
     <state width="808" height="438" key="XDebugger.FullValuePopup" timestamp="1583518107393">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -339,22 +346,22 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/front_controller.py</url>
-          <line>36</line>
+          <line>33</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/front_controller.py</url>
-          <line>44</line>
+          <line>41</line>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/front_controller.py</url>
-          <line>56</line>
+          <line>53</line>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/front_controller.py</url>
-          <line>24</line>
+          <line>21</line>
           <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>
