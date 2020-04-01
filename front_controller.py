@@ -94,8 +94,8 @@ def decompose():
     return html
 
 
-@app.route('/model', methods=['GET'])
-def model():
+@app.route('/stationary', methods=['GET'])
+def stationary():
     if time_series is None:
         return redirect(url_for('home'))
 
@@ -119,7 +119,7 @@ def model():
     js_resources = INLINE.render_js()
 
     html = render_template(
-        'model.html',
+        'stationary.html',
         js_resources=js_resources,
         dft_statistic_result=ts_result[0],
         dft_p_result=ts_result[1],
