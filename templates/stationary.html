@@ -111,6 +111,10 @@
                         <a href="{{ url_for('stationary') }}" class="waves-effect"><i class="fa fa-columns m-r-10"
                                                                                       aria-hidden="true"></i>Stationary</a>
                     </li>
+                    <li>
+                        <a href="{{ url_for('model') }}" class="waves-effect"><i class="fa fa-columns m-r-10"
+                                                                                 aria-hidden="true"></i>ARMA Model</a>
+                    </li>
                 </ul>
                 <div class="text-center m-t-30">
                     <a href="https://wrappixel.com/templates/monsteradmin/" class="btn btn-danger"> Save</a>
@@ -202,7 +206,7 @@
                                     <b>Log transformation</b>
                                     <div class="col-md-6 col-4 align-self-center">
                                         <button class="btn pull-right hidden-sm-down btn-success" type="submit">
-                                        Log
+                                            Log
                                         </button>
                                     </div>
                                 </form>
@@ -210,7 +214,7 @@
                                     <b>Save the result</b>
                                     <div class="col-md-6 col-4 align-self-center">
                                         <button class="btn pull-right hidden-sm-down btn-success" type="submit">
-                                        Accept
+                                            Accept
                                         </button>
                                     </div>
                                 </form>
@@ -276,8 +280,8 @@
     {{ script_acf|indent(4)|safe }}
     {{ script_pacf|indent(4)|safe }}
     {% if integer_result %}
-        {{ script_acf_integer|indent(4)|safe }}
-        {{ script_pacf_integer|indent(4)|safe }}
+    {{ script_acf_integer|indent(4)|safe }}
+    {{ script_pacf_integer|indent(4)|safe }}
     {% endif %}
 </div>
 </body>

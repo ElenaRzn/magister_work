@@ -154,5 +154,10 @@ def accept():
     time_series[information_column] = time_series['result']
     return redirect(url_for('index'))
 
+
+@app.route('/model', methods=['GET'])
+def model():
+    return redirect(url_for('index'))
+
 if __name__ == '__main__':
     app.run(debug=True)
