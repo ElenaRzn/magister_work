@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba55c777-f5a4-46bd-bb1e-7d6d10d967cf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tst.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tst2.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/front_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/stationary.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/stationary.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -232,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585728915062</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="differencing DOES NOT WORK">
+      <created>1585748266999</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1585748266999</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -258,7 +260,8 @@
     <MESSAGE value="Rename stationary to decompose" />
     <MESSAGE value="add acf and pacf" />
     <MESSAGE value="rename model to stationary" />
-    <option name="LAST_COMMIT_MESSAGE" value="rename model to stationary" />
+    <MESSAGE value="differencing DOES NOT WORK" />
+    <option name="LAST_COMMIT_MESSAGE" value="differencing DOES NOT WORK" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585598748506">
@@ -269,18 +272,18 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="102" y="241" width="1164" height="619" key="#xdebugger.evaluate/0.0.1600.860@0.0.1600.860" timestamp="1585747697417" />
-    <state x="220" y="29" width="1361" height="801" key="CommitChangelistDialog2" timestamp="1585728913141">
+    <state x="220" y="29" width="1361" height="801" key="CommitChangelistDialog2" timestamp="1585748264128">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="220" y="29" width="1361" height="801" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1585728913141" />
+    <state x="220" y="29" width="1361" height="801" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1585748264128" />
     <state width="464" height="466" key="DebuggerActiveHint" timestamp="1585682742134">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="464" height="466" key="DebuggerActiveHint/0.0.1600.860@0.0.1600.860" timestamp="1585682742134" />
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1585744900885">
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1585749405452">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1585744900885" />
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1585749405452" />
     <state x="534" y="196" key="EnvironmentVariablesDialog" timestamp="1583584458923">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -325,10 +328,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="521" y="171" width="555" height="524" key="StructurePopup/0.0.1600.860@0.0.1600.860" timestamp="1585683490172" />
-    <state x="392" y="155" key="Vcs.Push.Dialog.v2" timestamp="1585728916796">
+    <state x="392" y="155" key="Vcs.Push.Dialog.v2" timestamp="1585748741927">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="155" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1585728916796" />
+    <state x="392" y="155" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1585748741927" />
     <state width="808" height="438" key="XDebugger.FullValuePopup" timestamp="1583518107393">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
