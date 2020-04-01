@@ -197,50 +197,20 @@
                                             Integrate
                                         </button>
                                     </div>
-                                    <div>
-                                        {% if integer_result %}
-                                        <h3 class="card-title">Dickey-Fuller Test</h3>
-                                        <h4>Test statistic</h4>
-                                        <div>
-                                            {{ dft_statistic_result_integer }}
-                                        </div>
-                                        <h4>p-value_integer</h4>
-                                        <div>
-                                            {{ dft_p_result_integer }}
-                                        </div>
-                                        <h4>Critical values for the test statistic at 1 %, 5 %, and 10 % levels</h4>
-                                        <div>
-                                            {{ dft_critical_result_integer }}
-                                        </div>
-                                        <h3 class="card-title">Autocorrelation: {{ autocorrelation_integer }}</h3>
-                                        <div>
-                                            <h4>ACF Integer</h4>
-                                            {{ plot_acf_integer|indent(4)|safe }}
-                                        </div>
-                                        <div>
-                                            <h4>PACF Integer</h4>
-                                            {{ plot_pacf_integer|indent(4)|safe }}
-                                        </div>
-                                        {% endif %}
-                                    </div>
                                 </form>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- column -->
-            </div>
-            <div class="row">
-                <!-- column -->
-                <div class="col-sm-12">
-                    <div class="card">
-                        <div class="card-block">
-                            <div class="flot-chart">
                                 <form class="app-search p-l-20 p-t-20" method="post" action="/log">
                                     <b>Log transformation</b>
                                     <div class="col-md-6 col-4 align-self-center">
-                                        <button class="btn pull-right hidden-sm-down btn-success" type="submit">Log
+                                        <button class="btn pull-right hidden-sm-down btn-success" type="submit">
+                                        Log
+                                        </button>
+                                    </div>
+                                </form>
+                                <form class="app-search p-l-20 p-t-20" method="post" action="/accept">
+                                    <b>Save the result</b>
+                                    <div class="col-md-6 col-4 align-self-center">
+                                        <button class="btn pull-right hidden-sm-down btn-success" type="submit">
+                                        Accept
                                         </button>
                                     </div>
                                 </form>

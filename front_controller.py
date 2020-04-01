@@ -92,53 +92,30 @@ def decompose():
     return html
 
 
-@app.route('/stationary', methods=['GET'])
-def stationary():
+@app.route('/stationary', defaults={'integer_diff': None, 'log_diff':None}, methods=['GET'])
+@app.route('/stationary/<integer_diff>', defaults={'log_diff': None}, methods=['GET'])
+@app.route('/stationary/log_diff', defaults={'integer_diff': None}, methods=['GET'])
+def stationary(integer_diff, log_diff):
     if time_series is None:
         return redirect(url_for('home'))
 
-    ts_result = adfuller(time_series[information_column])
-    coefficient = time_series[information_column].autocorr()
+    to_analyse = []
+    if integer_diff is not None:
+        to_analyse = time_series['integer_diff']
+    elif log_diff is not None:
+        to_analyse = time_series['log_diff']
+    else:
+        to_analyse = time_series[information_column]
 
-    js_acf, div_acf = get_acf(time_series[information_column])
-    js_pacf, div_pacf = get_pacf(time_series[information_column])
+    time_series['result'] = to_analyse
+
+    ts_result = adfuller(to_analyse)
+    coefficient = to_analyse.autocorr()
+
+    js_acf, div_acf = get_acf(to_analyse)
+    js_pacf, div_pacf = get_pacf(to_analyse)
 
     js_resources = INLINE.render_js()
-
-    if 'integer_diff' in time_series.columns:
-        ts_result_integer = adfuller(time_series["integer_diff"])
-        coefficient_integer = time_series["integer_diff"].autocorr()
-
-        js_acf_integer, div_acf_integer = get_acf(time_series["integer_diff"])
-        js_pacf_integer, div_pacf_integer = get_pacf(time_series["integer_diff"])
-
-        # grab the static resources
-        html = render_template(
-            'stationary.html',
-            js_resources=js_resources,
-
-            dft_statistic_result=ts_result[0],
-            dft_p_result=ts_result[1],
-            dft_critical_result=ts_result[4],
-            autocorrelation=coefficient,
-            plot_acf=div_acf_integer,
-            plot_pacf=div_pacf_integer,
-            script_acf=js_acf_integer,
-            script_pacf=js_pacf_integer,
-
-            dft_statistic_result_integer=ts_result_integer[0],
-            dft_p_result_integer=ts_result_integer[1],
-            dft_critical_result_integer=ts_result_integer[4],
-            autocorrelation_integer=coefficient_integer,
-            plot_acf_integer=div_acf,
-            plot_pacf_integer=div_pacf,
-            script_acf_integer=js_acf,
-            script_pacf_integer=js_pacf,
-
-            integer_result=True
-
-        )
-        return html
 
     html = render_template(
         'stationary.html',
@@ -155,23 +132,27 @@ def stationary():
     return html
 
 
-
 @app.route('/integer', methods=['POST'])
 def integer():
     global time_series
     # Example of second differencing
     time_series["integer_diff"] = time_series[information_column].diff()
     time_series.dropna(inplace=True)
-    return redirect(url_for('stationary', integer_result=True))
+    return redirect(url_for('stationary', integer_diff=True))
 
-# @app.route('/log', methods=['POST'])
-# def integer():
-#     global time_series
-#     # Example of second differencing
-#     time_series["log_diff"] = time_series[information_column].log()
-#     time_series.dropna(inplace=True)
-#     return redirect(url_for('stationary'))
 
+@app.route('/log', methods=['POST'])
+def log():
+    global time_series
+    time_series["log_diff"] = np.log(time_series[information_column])
+    time_series.dropna(inplace=True)
+    return redirect(url_for('stationary', log_deff=True))
+
+@app.route('/accept', methods=['POST'])
+def accept():
+    global time_series
+    time_series[information_column] = time_series['result']
+    return redirect(url_for('index'))
 
 if __name__ == '__main__':
     app.run(debug=True)
