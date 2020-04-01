@@ -1,0 +1,417 @@
+{
+  "3db4b920-0784-4e86-b538-990b7d3d5e97": {
+    "roots": {
+      "references": [
+        {
+          "attributes": {
+            "data_source": {
+              "id": "1425",
+              "type": "ColumnDataSource"
+            },
+            "glyph": {
+              "id": "1426",
+              "type": "VBar"
+            },
+            "hover_glyph": null,
+            "muted_glyph": null,
+            "nonselection_glyph": {
+              "id": "1427",
+              "type": "VBar"
+            },
+            "selection_glyph": null,
+            "view": {
+              "id": "1429",
+              "type": "CDSView"
+            }
+          },
+          "id": "1428",
+          "type": "GlyphRenderer"
+        },
+        {
+          "attributes": {},
+          "id": "1403",
+          "type": "BasicTicker"
+        },
+        {
+          "attributes": {
+            "fill_color": {
+              "value": "firebrick"
+            },
+            "line_color": {
+              "value": "firebrick"
+            },
+            "top": {
+              "field": "top"
+            },
+            "width": {
+              "value": 0.05
+            },
+            "x": {
+              "field": "x"
+            }
+          },
+          "id": "1426",
+          "type": "VBar"
+        },
+        {
+          "attributes": {
+            "axis_label": "Value",
+            "formatter": {
+              "id": "1434",
+              "type": "BasicTickFormatter"
+            },
+            "ticker": {
+              "id": "1408",
+              "type": "BasicTicker"
+            }
+          },
+          "id": "1407",
+          "type": "LinearAxis"
+        },
+        {
+          "attributes": {
+            "callback": null,
+            "data": {
+              "top": {
+                "__ndarray__": "AAAAAAAA8D97ojfzu57tP10+fgcOKbK/IIzqp5YHiz9AbrQN56zRP4qR6cUZvMQ/+mDhhPg6nz9ETNsKtD+kvwb75VRb2sc/ADFB7S3lzz8XZyvAwU7ZP1+LrVzDqdc/DPWy7tuLwT8=",
+                "dtype": "float64",
+                "shape": [
+                  13
+                ]
+              },
+              "x": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ]
+            },
+            "selected": {
+              "id": "1439",
+              "type": "Selection"
+            },
+            "selection_policy": {
+              "id": "1438",
+              "type": "UnionRenderers"
+            }
+          },
+          "id": "1425",
+          "type": "ColumnDataSource"
+        },
+        {
+          "attributes": {},
+          "id": "1417",
+          "type": "HelpTool"
+        },
+        {
+          "attributes": {
+            "axis_label": "Lags",
+            "formatter": {
+              "id": "1436",
+              "type": "BasicTickFormatter"
+            },
+            "ticker": {
+              "id": "1403",
+              "type": "BasicTicker"
+            }
+          },
+          "id": "1402",
+          "type": "LinearAxis"
+        },
+        {
+          "attributes": {
+            "text": "PACF"
+          },
+          "id": "1430",
+          "type": "Title"
+        },
+        {
+          "attributes": {},
+          "id": "1398",
+          "type": "LinearScale"
+        },
+        {
+          "attributes": {
+            "source": {
+              "id": "1425",
+              "type": "ColumnDataSource"
+            }
+          },
+          "id": "1429",
+          "type": "CDSView"
+        },
+        {
+          "attributes": {},
+          "id": "1438",
+          "type": "UnionRenderers"
+        },
+        {
+          "attributes": {
+            "callback": null
+          },
+          "id": "1396",
+          "type": "DataRange1d"
+        },
+        {
+          "attributes": {},
+          "id": "1408",
+          "type": "BasicTicker"
+        },
+        {
+          "attributes": {},
+          "id": "1416",
+          "type": "ResetTool"
+        },
+        {
+          "attributes": {},
+          "id": "1413",
+          "type": "WheelZoomTool"
+        },
+        {
+          "attributes": {
+            "grid_line_alpha": 0,
+            "ticker": {
+              "id": "1403",
+              "type": "BasicTicker"
+            }
+          },
+          "id": "1406",
+          "type": "Grid"
+        },
+        {
+          "attributes": {
+            "fill_alpha": {
+              "value": 0.1
+            },
+            "fill_color": {
+              "value": "#1f77b4"
+            },
+            "line_alpha": {
+              "value": 0.1
+            },
+            "line_color": {
+              "value": "#1f77b4"
+            },
+            "top": {
+              "field": "top"
+            },
+            "width": {
+              "value": 0.05
+            },
+            "x": {
+              "field": "x"
+            }
+          },
+          "id": "1427",
+          "type": "VBar"
+        },
+        {
+          "attributes": {},
+          "id": "1439",
+          "type": "Selection"
+        },
+        {
+          "attributes": {},
+          "id": "1436",
+          "type": "BasicTickFormatter"
+        },
+        {
+          "attributes": {
+            "below": [
+              {
+                "id": "1402",
+                "type": "LinearAxis"
+              }
+            ],
+            "center": [
+              {
+                "id": "1406",
+                "type": "Grid"
+              },
+              {
+                "id": "1411",
+                "type": "Grid"
+              }
+            ],
+            "height_policy": "max",
+            "left": [
+              {
+                "id": "1407",
+                "type": "LinearAxis"
+              }
+            ],
+            "plot_height": 250,
+            "plot_width": 150,
+            "renderers": [
+              {
+                "id": "1428",
+                "type": "GlyphRenderer"
+              }
+            ],
+            "title": {
+              "id": "1430",
+              "type": "Title"
+            },
+            "toolbar": {
+              "id": "1418",
+              "type": "Toolbar"
+            },
+            "width_policy": "max",
+            "x_range": {
+              "id": "1394",
+              "type": "DataRange1d"
+            },
+            "x_scale": {
+              "id": "1398",
+              "type": "LinearScale"
+            },
+            "y_range": {
+              "id": "1396",
+              "type": "DataRange1d"
+            },
+            "y_scale": {
+              "id": "1400",
+              "type": "LinearScale"
+            }
+          },
+          "id": "1393",
+          "subtype": "Figure",
+          "type": "Plot"
+        },
+        {
+          "attributes": {
+            "callback": null
+          },
+          "id": "1394",
+          "type": "DataRange1d"
+        },
+        {
+          "attributes": {
+            "band_fill_alpha": 0.1,
+            "band_fill_color": "olive",
+            "dimension": 1,
+            "grid_line_alpha": 0,
+            "ticker": {
+              "id": "1408",
+              "type": "BasicTicker"
+            }
+          },
+          "id": "1411",
+          "type": "Grid"
+        },
+        {
+          "attributes": {},
+          "id": "1434",
+          "type": "BasicTickFormatter"
+        },
+        {
+          "attributes": {
+            "bottom_units": "screen",
+            "fill_alpha": {
+              "value": 0.5
+            },
+            "fill_color": {
+              "value": "lightgrey"
+            },
+            "left_units": "screen",
+            "level": "overlay",
+            "line_alpha": {
+              "value": 1.0
+            },
+            "line_color": {
+              "value": "black"
+            },
+            "line_dash": [
+              4,
+              4
+            ],
+            "line_width": {
+              "value": 2
+            },
+            "render_mode": "css",
+            "right_units": "screen",
+            "top_units": "screen"
+          },
+          "id": "1437",
+          "type": "BoxAnnotation"
+        },
+        {
+          "attributes": {},
+          "id": "1415",
+          "type": "SaveTool"
+        },
+        {
+          "attributes": {
+            "active_drag": "auto",
+            "active_inspect": "auto",
+            "active_multi": null,
+            "active_scroll": "auto",
+            "active_tap": "auto",
+            "tools": [
+              {
+                "id": "1412",
+                "type": "PanTool"
+              },
+              {
+                "id": "1413",
+                "type": "WheelZoomTool"
+              },
+              {
+                "id": "1414",
+                "type": "BoxZoomTool"
+              },
+              {
+                "id": "1415",
+                "type": "SaveTool"
+              },
+              {
+                "id": "1416",
+                "type": "ResetTool"
+              },
+              {
+                "id": "1417",
+                "type": "HelpTool"
+              }
+            ]
+          },
+          "id": "1418",
+          "type": "Toolbar"
+        },
+        {
+          "attributes": {
+            "overlay": {
+              "id": "1437",
+              "type": "BoxAnnotation"
+            }
+          },
+          "id": "1414",
+          "type": "BoxZoomTool"
+        },
+        {
+          "attributes": {},
+          "id": "1412",
+          "type": "PanTool"
+        },
+        {
+          "attributes": {},
+          "id": "1400",
+          "type": "LinearScale"
+        }
+      ],
+      "root_ids": [
+        "1393"
+      ]
+    },
+    "title": "Bokeh Application",
+    "version": "1.4.0"
+  }
+}

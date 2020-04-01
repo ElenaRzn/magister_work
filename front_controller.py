@@ -118,6 +118,48 @@ def stationary():
     # grab the static resources
     js_resources = INLINE.render_js()
 
+    if 'integer_diff' in time_series.columns:
+        # Dickey-Fuller Test
+        ts_result_integer = adfuller(time_series["integer_diff"])
+        # Autocorrelation
+        coefficient_integer = time_series["integer_diff"].autocorr()
+
+        # Plot ACF to visualize the autocorrelation
+
+        plt_acf_integer = statsmodels.tsa.stattools.acf(time_series["integer_diff"], nlags=12)
+        acf_integer = get_single_chart(plt_acf_integer, "ACF")
+        js_acf_integer, div_acf_integer = components(acf_integer)
+
+        # Plot Partial autocorrelation function (PACF)
+        plt_pacf_integer = statsmodels.tsa.stattools.pacf(time_series["integer_diff"], nlags=12)
+        pacf_integer = get_single_chart(plt_pacf_integer, "PACF")
+        js_pacf_integer, div_pacf_integer = components(pacf_integer)
+
+        # grab the static resources
+        html = render_template(
+            'stationary.html',
+            js_resources=js_resources,
+            dft_statistic_result=ts_result[0],
+            dft_p_result=ts_result[1],
+            dft_critical_result=ts_result[4],
+            autocorrelation=coefficient,
+            plot_acf=div_acf,
+            plot_pacf=div_pacf,
+            script_acf=js_acf,
+            script_pacf=js_pacf,
+            dft_statistic_result_integer=ts_result_integer[0],
+            dft_p_result_integer=ts_result_integer[1],
+            dft_critical_result_integer=ts_result_integer[4],
+            autocorrelation_integer=coefficient_integer,
+            plot_acf_integer=div_acf_integer,
+            plot_pacf_integer=div_pacf_integer,
+            script_acf_integer=js_acf_integer,
+            script_pacf_integer=js_pacf_integer,
+            integer_result=True
+
+        )
+        return html
+
     html = render_template(
         'stationary.html',
         js_resources=js_resources,
@@ -132,6 +174,23 @@ def stationary():
     )
     return html
 
+
+
+@app.route('/integer', methods=['POST'])
+def integer():
+    global time_series
+    # Example of second differencing
+    time_series["integer_diff"] = time_series[information_column].diff()
+    time_series.dropna(inplace=True)
+    return redirect(url_for('stationary', integer_result=True))
+
+# @app.route('/log', methods=['POST'])
+# def integer():
+#     global time_series
+#     # Example of second differencing
+#     time_series["log_diff"] = time_series[information_column].log()
+#     time_series.dropna(inplace=True)
+#     return redirect(url_for('stationary'))
 
 
 if __name__ == '__main__':

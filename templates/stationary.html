@@ -109,7 +109,7 @@
                     </li>
                     <li>
                         <a href="{{ url_for('stationary') }}" class="waves-effect"><i class="fa fa-columns m-r-10"
-                                                                                 aria-hidden="true"></i>Stationary</a>
+                                                                                      aria-hidden="true"></i>Stationary</a>
                     </li>
                 </ul>
                 <div class="text-center m-t-30">
@@ -176,8 +176,75 @@
                             <div>
                                 {{ plot_acf|indent(4)|safe }}
                             </div>
-                            <div >
+                            <div>
                                 {{ plot_pacf|indent(4)|safe }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- column -->
+            </div>
+            <div class="row">
+                <!-- column -->
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-block">
+                            <div class="flot-chart">
+                                <form class="app-search p-l-20 p-t-20" method="post" action="/integer">
+                                    <b>Integer integrate</b>
+                                    <div class="col-md-6 col-4 align-self-center">
+                                        <button class="btn pull-right hidden-sm-down btn-success" type="submit">
+                                            Integrate
+                                        </button>
+                                    </div>
+                                    <div>
+                                        {% if integer_result %}
+                                        <h3 class="card-title">Dickey-Fuller Test</h3>
+                                        <h4>Test statistic</h4>
+                                        <div>
+                                            {{ dft_statistic_result_integer }}
+                                        </div>
+                                        <h4>p-value_integer</h4>
+                                        <div>
+                                            {{ dft_p_result_integer }}
+                                        </div>
+                                        <h4>Critical values for the test statistic at 1 %, 5 %, and 10 % levels</h4>
+                                        <div>
+                                            {{ dft_critical_result_integer }}
+                                        </div>
+                                        <h3 class="card-title">Autocorrelation: {{ autocorrelation_integer }}</h3>
+                                        <div>
+                                            <h4>ACF Integer</h4>
+                                            {{ plot_acf_integer|indent(4)|safe }}
+                                        </div>
+                                        <div>
+                                            <h4>PACF Integer</h4>
+                                            {{ plot_pacf_integer|indent(4)|safe }}
+                                        </div>
+                                        {% endif %}
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- column -->
+            </div>
+            <div class="row">
+                <!-- column -->
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-block">
+                            <div class="flot-chart">
+                                <form class="app-search p-l-20 p-t-20" method="post" action="/log">
+                                    <b>Log transformation</b>
+                                    <div class="col-md-6 col-4 align-self-center">
+                                        <button class="btn pull-right hidden-sm-down btn-success" type="submit">Log
+                                        </button>
+                                    </div>
+                                </form>
+
                             </div>
                         </div>
                     </div>
@@ -238,6 +305,10 @@
     {{ js_resources|indent(4)|safe }}
     {{ script_acf|indent(4)|safe }}
     {{ script_pacf|indent(4)|safe }}
+    {% if integer_result %}
+        {{ script_acf_integer|indent(4)|safe }}
+        {{ script_pacf_integer|indent(4)|safe }}
+    {% endif %}
 </div>
 </body>
 
