@@ -3,7 +3,7 @@
 """
 import numpy as np
 from bokeh.io import output_file
-from bokeh.models import ColumnDataSource
+from bokeh.models import ColumnDataSource, Legend, LegendItem
 from bokeh.plotting import figure
 from pandas import read_csv
 
@@ -71,7 +71,7 @@ def get_single_figure(data, text):
     return p
 
 
-def get_multi_figure(x1, x2, y1, y2, text):
+def get_multi_figure(x1, x2, x3, y1, y2, y3, text):
     window_size = 50
 
     # output to static HTML file
@@ -88,8 +88,14 @@ def get_multi_figure(x1, x2, y1, y2, text):
     # ))
 
     # p.vline_stack(x='x', y=['y1', 'y2'], source=source, color=["firebrick", "navy"])
-    p.multi_line(xs=[x1, x2], ys=[y1, y2],
-                 color=['red', 'green'])
+    r = p.multi_line(xs=[x1, x2, x3], ys=[y1, y2, y3],
+                 color=['blue', 'green', 'red'])
+    legend = Legend(items=[
+        LegendItem(label="test", renderers=[r], index=0),
+        LegendItem(label="actual", renderers=[r], index=1),
+        LegendItem(label="predicted", renderers=[r], index=2),
+    ])
+    p.add_layout(legend)
 
     # NEW: customize by setting attributes
     p.title.text = text

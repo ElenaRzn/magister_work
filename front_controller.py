@@ -181,10 +181,10 @@ def arma():
     d = int(request.form['ma'])
 
     # Create Training and Test
-    # train = df.value[:85]
-    # test = df.value[85:]
+    train = time_series[information_column][:len(time_series[information_column]) - 15]
+    test = time_series[information_column][len(time_series[information_column]) - 15:]
 
-    mod = ARMA(time_series[information_column][0: len(time_series[information_column]) - 15], order=(p, d))
+    mod = ARMA(train, order=(p, d))
 
     res = mod.fit()
 
@@ -198,9 +198,9 @@ def arma():
 
     forecasts, stderr, conf_int = res.forecast(15, alpha=0.05)
     # figure = get_multi_figure(time_series[information_column], time_series[date_column], prediction, 'ARIMA')
-    figure = get_multi_figure(list(range(0, time_series[information_column].size)),
-                              list(range(time_series[information_column].size - 15, time_series[information_column].size)),
-                              time_series[information_column], forecasts, 'ARMA')
+    figure = get_multi_figure(list(range(0, train.size)), list(range(train.size, time_series[information_column].size)),
+                              list(range(train.size, time_series[information_column].size)),
+                              train, test, forecasts, 'ARMA')
     script, div = components(figure)
 
     js_resources = INLINE.render_js()
