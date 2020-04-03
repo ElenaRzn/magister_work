@@ -1,13 +1,15 @@
 import numpy as np
+import pandas as pd
 from bokeh.embed import components
 from bokeh.resources import INLINE
 from flask import Flask, render_template, redirect, url_for, request
 from pandas.io.parsers import read_csv
 from statsmodels.tsa.seasonal import seasonal_decompose
 from statsmodels.tsa.stattools import adfuller
+from statsmodels.tsa.arima_model import ARMA
 
 from autocorrelation import get_acf, get_pacf
-from figure_converter import get_figure, get_single_figure
+from figure_converter import get_figure, get_single_figure, get_multi_figure
 
 app = Flask(__name__)
 
@@ -157,7 +159,93 @@ def accept():
 
 @app.route('/model', methods=['GET'])
 def model():
-    return redirect(url_for('index'))
+    if time_series is None:
+        return redirect(url_for('home'))
+    js_acf, div_acf = get_acf(time_series[information_column])
+    js_pacf, div_pacf = get_pacf(time_series[information_column])
+    js_resources = INLINE.render_js()
+    html = render_template(
+        'model.html',
+        js_resources=js_resources,
+        plot_acf=div_acf,
+        plot_pacf=div_pacf,
+        script_acf=js_acf,
+        script_pacf=js_pacf
+    )
+    return html
+
+
+@app.route('/arma', methods=['POST'])
+def arma():
+    p = int(request.form['ar'])
+    d = int(request.form['ma'])
+
+    # Create Training and Test
+    # train = df.value[:85]
+    # test = df.value[85:]
+
+    mod = ARMA(time_series[information_column][0: len(time_series[information_column]) - 15], order=(p, d))
+
+    res = mod.fit()
+
+    # Print out summary information on the fit
+    summary = res.summary()
+
+    # Print out the estimate for the constant and for theta
+    params = res.params
+
+    # prediction = res.predict(start=len(time_series[information_column]), end=len(time_series[information_column]) + 10)
+
+    forecasts, stderr, conf_int = res.forecast(15, alpha=0.05)
+    # figure = get_multi_figure(time_series[information_column], time_series[date_column], prediction, 'ARIMA')
+    figure = get_multi_figure(list(range(0, time_series[information_column].size)),
+                              list(range(time_series[information_column].size - 15, time_series[information_column].size)),
+                              time_series[information_column], forecasts, 'ARMA')
+    script, div = components(figure)
+
+    js_resources = INLINE.render_js()
+    html = render_template(
+        'result.html',
+        js_resources=js_resources,
+        plot_model=div,
+        plot_script=script,
+        summary = summary,
+        params = params
+    )
+    return html
+
+
+# @app.route('/arma', methods=['POST'])
+# def arma():
+#     p = int(request.form['ar'])
+#     d = int(request.form['ma'])
+#
+#     mod = ARMA(time_series[information_column], order=(int(request.form['ar']), int(request.form['ma'])))
+#
+#     res = mod.fit()
+#
+#     # Print out summary information on the fit
+#     summary = res.summary()
+#
+#     # Print out the estimate for the constant and for theta
+#     params = res.params
+#
+#     prediction = res.predict(start=len(time_series[information_column]), end=2025)
+#     # figure = get_multi_figure(time_series[information_column], time_series[date_column], prediction, 'ARIMA')
+#     figure = get_figure(time_series[date_column], time_series[information_column])
+#     script, div = components(figure)
+#
+#     js_resources = INLINE.render_js()
+#     html = render_template(
+#         'result.html',
+#         js_resources=js_resources,
+#         plot_model=div,
+#         plot_script=script,
+#         summary = summary,
+#         params = params
+#     )
+#     return html
+
 
 if __name__ == '__main__':
     app.run(debug=True)
