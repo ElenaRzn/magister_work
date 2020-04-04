@@ -8,8 +8,10 @@ from statsmodels.tsa.seasonal import seasonal_decompose
 from statsmodels.tsa.stattools import adfuller
 from statsmodels.tsa.arima_model import ARMA
 
+import fractal_dimension
 from autocorrelation import get_acf, get_pacf
 from figure_converter import get_figure, get_single_figure, get_multi_figure
+from hurst import hurst
 
 app = Flask(__name__)
 
@@ -50,6 +52,7 @@ def index():
 def load():
     global time_series
     time_series = read_csv(request.form['file'], parse_dates=True)
+    time_series.dropna(inplace=True)
     global information_column
     information_column = request.form['data']
     global date_column
@@ -215,37 +218,18 @@ def arma():
     return html
 
 
-# @app.route('/arma', methods=['POST'])
-# def arma():
-#     p = int(request.form['ar'])
-#     d = int(request.form['ma'])
-#
-#     mod = ARMA(time_series[information_column], order=(int(request.form['ar']), int(request.form['ma'])))
-#
-#     res = mod.fit()
-#
-#     # Print out summary information on the fit
-#     summary = res.summary()
-#
-#     # Print out the estimate for the constant and for theta
-#     params = res.params
-#
-#     prediction = res.predict(start=len(time_series[information_column]), end=2025)
-#     # figure = get_multi_figure(time_series[information_column], time_series[date_column], prediction, 'ARIMA')
-#     figure = get_figure(time_series[date_column], time_series[information_column])
-#     script, div = components(figure)
-#
-#     js_resources = INLINE.render_js()
-#     html = render_template(
-#         'result.html',
-#         js_resources=js_resources,
-#         plot_model=div,
-#         plot_script=script,
-#         summary = summary,
-#         params = params
-#     )
-#     return html
-
+@app.route('/fractal', methods=['GET'])
+def fractal():
+    hurst_exp = hurst(time_series[information_column])
+    hfd = fractal_dimension.hfd(time_series[information_column], 10)
+    pfd = fractal_dimension.pfd(time_series[information_column])
+    html = render_template(
+        'fractal.html',
+        hurst = hurst_exp,
+        pfd = pfd,
+        hfd = hfd
+    )
+    return html
 
 if __name__ == '__main__':
     app.run(debug=True)

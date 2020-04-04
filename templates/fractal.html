@@ -104,7 +104,7 @@
                                                                            aria-hidden="true"></i>Decompose</a>
                     </li>
                     <li>
-                        <a href="{{ url_for('fractal') }}" class="waves-effect"><i class="fa fa-snowflake-o m-r-10"
+                        <a href="pages-error-404.html" class="waves-effect"><i class="fa fa-snowflake-o m-r-10"
                                                                                aria-hidden="true"></i>Fractal</a>
                     </li>
                     <li>
@@ -159,10 +159,10 @@
                 <div class="col-sm-12">
                     <div class="card">
                         <div class="card-block">
-                            <h4 class="card-title">{{ file_name }}</h4>
-                            <div class="flot-chart">
-                                    {{ plot_div|indent(4)|safe }}
-                            </div>
+                            <h4 class="card-title">Hurst exponent = {{ hurst }}</h4>
+                            <h4 class="card-title">Petrosian Fractal Dimension = {{ pfd }}</h4>
+                            <h4 class="card-title">Higuchi Fractal Dimension = {{ hfd }}</h4>
+
                         </div>
                     </div>
                 </div>
@@ -219,8 +219,6 @@
     <!-- Style switcher -->
     <!-- ============================================================== -->
     <script src="../static/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
-    {{ js_resources|indent(4)|safe }}
-    {{ plot_script|indent(4)|safe }}
 </div>
 </body>
 
