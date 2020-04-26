@@ -11,6 +11,7 @@ from statsmodels.tsa.arima_model import ARMA
 import fractal_dimension
 from autocorrelation import get_acf, get_pacf
 from figure_converter import get_figure, get_single_figure, get_multi_figure
+from frac_diff import ts_differencing
 from hurst import hurst
 
 app = Flask(__name__)
@@ -152,6 +153,15 @@ def log():
     time_series["log_diff"] = np.log(time_series[information_column])
     time_series.dropna(inplace=True)
     return redirect(url_for('stationary', log_deff=True))
+
+
+@app.route('/fract', methods=['POST'])
+def fract():
+    global time_series
+    time_series["fractal_diff"] = ts_differencing(time_series[information_column], 0.6, 4)
+    time_series.dropna(inplace=True)
+    return redirect(url_for('stationary', log_deff=True))
+
 
 @app.route('/accept', methods=['POST'])
 def accept():
