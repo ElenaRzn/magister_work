@@ -14,9 +14,9 @@
     <!-- Bootstrap Core CSS -->
     <link href="../static/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
     <!-- You can change the theme colors from here -->
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/colors/blue.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/colors/blue.css') }}">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -48,14 +48,14 @@
             <!-- ============================================================== -->
             <div class="navbar-header">
                 <a class="navbar-brand" href="index.html"></a>
-                    <!-- Logo icon -->
-                    <b>
-                        <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
-                        <!-- Dark Logo icon -->
-                        <img src="../static/assets/images/logo-icon.png" alt="homepage" class="dark-logo"/>
+                <!-- Logo icon -->
+                <b>
+                    <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                    <!-- Dark Logo icon -->
+                    <img src="../static/assets/images/logo-icon.png" alt="homepage" class="dark-logo"/>
 
-                    </b>
-                    <!--End Logo icon -->
+                </b>
+                <!--End Logo icon -->
             </div>
             <!-- ============================================================== -->
             <!-- End Logo -->
@@ -93,7 +93,7 @@
                 <ul id="sidebarnav">
                     <li>
                         <a href="{{ url_for('index') }}" class="waves-effect"><i class="fa fa-clock-o m-r-10"
-                                                                     aria-hidden="true"></i>Dashboard</a>
+                                                                                 aria-hidden="true"></i>Dashboard</a>
                     </li>
                     <li>
                         <a href="table-basic.html" class="waves-effect"><i class="fa fa-table m-r-10"
@@ -101,7 +101,7 @@
                     </li>
                     <li>
                         <a href="{{ url_for('decompose') }}" class="waves-effect"><i class="fa fa-info-circle m-r-10"
-                                                                           aria-hidden="true"></i>Decompose</a>
+                                                                                     aria-hidden="true"></i>Decompose</a>
                     </li>
                     <li>
                         <a href="pages-error-404.html" class="waves-effect"><i class="fa fa-snowflake-o m-r-10"
@@ -109,11 +109,16 @@
                     </li>
                     <li>
                         <a href="{{ url_for('stationary') }}" class="waves-effect"><i class="fa fa-columns m-r-10"
-                                                                               aria-hidden="true"></i>Stationary</a>
+                                                                                      aria-hidden="true"></i>Stationary</a>
                     </li>
                     <li>
                         <a href="{{ url_for('model') }}" class="waves-effect"><i class="fa fa-columns m-r-10"
-                                                                               aria-hidden="true"></i>ARMA Model</a>
+                                                                                 aria-hidden="true"></i>ARIMA Model</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('fract_model') }}" class="waves-effect"><i class="fa fa-columns m-r-10"
+                                                                                       aria-hidden="true"></i>ARFIMA
+                            Model</a>
                     </li>
                 </ul>
                 <div class="text-center m-t-30">

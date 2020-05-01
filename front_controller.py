@@ -6,13 +6,15 @@ from flask import Flask, render_template, redirect, url_for, request
 from pandas.io.parsers import read_csv
 from statsmodels.tsa.seasonal import seasonal_decompose
 from statsmodels.tsa.stattools import adfuller
-from statsmodels.tsa.arima_model import ARMA
+from statsmodels.tsa.arima_model import ARMA, ARIMA
+from statsmodels.tsa.arima_process import lpol_fiar
 
 import fractal_dimension
 from autocorrelation import get_acf, get_pacf
 from figure_converter import get_figure, get_single_figure, get_multi_figure
 from frac_diff import ts_differencing
 from hurst import hurst
+
 
 app = Flask(__name__)
 
@@ -187,17 +189,35 @@ def model():
     )
     return html
 
+@app.route('/fract_model', methods=['GET'])
+def fract_model():
+    if time_series is None:
+        return redirect(url_for('home'))
+    js_acf, div_acf = get_acf(time_series[information_column])
+    js_pacf, div_pacf = get_pacf(time_series[information_column])
+    js_resources = INLINE.render_js()
+    html = render_template(
+        'fract_model.html',
+        js_resources=js_resources,
+        plot_acf=div_acf,
+        plot_pacf=div_pacf,
+        script_acf=js_acf,
+        script_pacf=js_pacf
+    )
+    return html
 
-@app.route('/arma', methods=['POST'])
-def arma():
+
+@app.route('/arima', methods=['POST'])
+def arima():
     p = int(request.form['ar'])
-    d = int(request.form['ma'])
+    d = int(request.form['integrate'])
+    q = int(request.form['ma'])
 
     # Create Training and Test
     train = time_series[information_column][:len(time_series[information_column]) - 15]
     test = time_series[information_column][len(time_series[information_column]) - 15:]
 
-    mod = ARMA(train, order=(p, d))
+    mod = ARIMA(train, order=(p, d, q))
 
     res = mod.fit()
 
@@ -213,7 +233,7 @@ def arma():
     # figure = get_multi_figure(time_series[information_column], time_series[date_column], prediction, 'ARIMA')
     figure = get_multi_figure(list(range(0, train.size)), list(range(train.size, time_series[information_column].size)),
                               list(range(train.size, time_series[information_column].size)),
-                              train, test, forecasts, 'ARMA')
+                              train, test, forecasts, 'ARIMA')
     script, div = components(figure)
 
     js_resources = INLINE.render_js()
@@ -227,6 +247,61 @@ def arma():
     )
     return html
 
+
+
+
+@app.route('/arfima', methods=['POST'])
+def arfima():
+    p = int(request.form['ar'])
+    d = float(request.form['integrate'])
+    q = int(request.form['ma'])
+
+    global time_series
+    fractal_diff = ts_differencing(time_series[information_column], d, 4)
+    fractal_diff.dropna(inplace=True)
+
+    # Create Training and Test
+    train = fractal_diff[:len(fractal_diff) - 15]
+    test = fractal_diff[len(fractal_diff) - 15:]
+
+    mod = ARMA(train, order=(p, q))
+
+    res = mod.fit()
+
+    # Print out summary information on the fit
+    summary = res.summary()
+
+    # Print out the estimate for the constant and for theta
+    params = res.params
+
+    # prediction = res.predict(start=len(time_series[information_column]), end=len(time_series[information_column]) + 10)
+
+    forecasts, stderr, conf_int = res.forecast(15, alpha=0.05)
+
+    fractal_forecast = ts_differencing(pd.Series(forecasts), -0.85, 4)
+    fractal_diff_return = ts_differencing(pd.Series(fractal_diff), -0.85, 4)
+    fractal_forecast.dropna(inplace=True)
+
+    # figure = get_multi_figure(time_series[information_column], time_series[date_column], prediction, 'ARIMA')
+    figure = get_multi_figure(list(range(0, train.size)),
+                              list(range(train.size, time_series[information_column].size)),
+                              list(range(train.size, time_series[information_column].size)),
+                              time_series[information_column][:len(time_series[information_column]) - 15],
+                              # fractal_diff,
+                              time_series[information_column][len(time_series[information_column]) - 15:],
+                              fractal_forecast, 'ARFIMA')
+    script, div = components(figure)
+
+    js_resources = INLINE.render_js()
+    html = render_template(
+        'result.html',
+        js_resources=js_resources,
+        plot_model=div,
+        plot_script=script,
+        summary = summary,
+        params = params
+    )
+    return html
 
 @app.route('/fractal', methods=['GET'])
 def fractal():

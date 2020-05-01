@@ -14,9 +14,9 @@
     <!-- Bootstrap Core CSS -->
     <link href="../static/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
     <!-- You can change the theme colors from here -->
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/colors/blue.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/colors/blue.css') }}">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -93,7 +93,7 @@
                 <ul id="sidebarnav">
                     <li>
                         <a href="{{ url_for('index') }}" class="waves-effect"><i class="fa fa-clock-o m-r-10"
-                                                                     aria-hidden="true"></i>Dashboard</a>
+                                                                                 aria-hidden="true"></i>Dashboard</a>
                     </li>
                     <li>
                         <a href="table-basic.html" class="waves-effect"><i class="fa fa-table m-r-10"
@@ -101,19 +101,24 @@
                     </li>
                     <li>
                         <a href="{{ url_for('decompose') }}" class="waves-effect"><i class="fa fa-info-circle m-r-10"
-                                                                           aria-hidden="true"></i>Decompose</a>
+                                                                                     aria-hidden="true"></i>Decompose</a>
                     </li>
                     <li>
                         <a href="{{ url_for('fractal') }}" class="waves-effect"><i class="fa fa-snowflake-o m-r-10"
-                                                                               aria-hidden="true"></i>Fractal</a>
+                                                                                   aria-hidden="true"></i>Fractal</a>
                     </li>
                     <li>
                         <a href="{{ url_for('stationary') }}" class="waves-effect"><i class="fa fa-columns m-r-10"
-                                                                               aria-hidden="true"></i>Stationary</a>
+                                                                                      aria-hidden="true"></i>Stationary</a>
                     </li>
                     <li>
                         <a href="{{ url_for('model') }}" class="waves-effect"><i class="fa fa-columns m-r-10"
-                                                                               aria-hidden="true"></i>ARMA Model</a>
+                                                                                 aria-hidden="true"></i>ARIMA Model</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('fract_model') }}" class="waves-effect"><i class="fa fa-columns m-r-10"
+                                                                                       aria-hidden="true"></i>ARFIMA
+                            Model</a>
                     </li>
                 </ul>
                 <div class="text-center m-t-30">
@@ -168,7 +173,7 @@
                                 {{ plot_observed|indent(4)|safe }}
                             </div>
                             <div class="flot-chart">
-                                 {{ plot_trend|indent(4)|safe }}
+                                {{ plot_trend|indent(4)|safe }}
                             </div>
                             <div class="flot-chart">
                                 {{ plot_seasonality|indent(4)|safe }}

@@ -93,7 +93,7 @@
                 <ul id="sidebarnav">
                     <li>
                         <a href="{{ url_for('index') }}" class="waves-effect"><i class="fa fa-clock-o m-r-10"
-                                                                     aria-hidden="true"></i>Dashboard</a>
+                                                                                 aria-hidden="true"></i>Dashboard</a>
                     </li>
                     <li>
                         <a href="table-basic.html" class="waves-effect"><i class="fa fa-table m-r-10"
@@ -101,19 +101,24 @@
                     </li>
                     <li>
                         <a href="{{ url_for('decompose') }}" class="waves-effect"><i class="fa fa-info-circle m-r-10"
-                                                                           aria-hidden="true"></i>Decompose</a>
+                                                                                     aria-hidden="true"></i>Decompose</a>
                     </li>
                     <li>
                         <a href="{{ url_for('fractal') }}" class="waves-effect"><i class="fa fa-snowflake-o m-r-10"
-                                                                               aria-hidden="true"></i>Fractal</a>
+                                                                                   aria-hidden="true"></i>Fractal</a>
                     </li>
                     <li>
                         <a href="{{ url_for('stationary') }}" class="waves-effect"><i class="fa fa-columns m-r-10"
-                                                                               aria-hidden="true"></i>Stationary</a>
+                                                                                      aria-hidden="true"></i>Stationary</a>
                     </li>
                     <li>
                         <a href="{{ url_for('model') }}" class="waves-effect"><i class="fa fa-columns m-r-10"
-                                                                               aria-hidden="true"></i>ARMA Model</a>
+                                                                                 aria-hidden="true"></i>ARIMA Model</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('fract_model') }}" class="waves-effect"><i class="fa fa-columns m-r-10"
+                                                                                       aria-hidden="true"></i>ARFIMA
+                            Model</a>
                     </li>
                 </ul>
                 <div class="text-center m-t-30">
@@ -166,11 +171,14 @@
                                     <b>Enter .csv file name</b>
                                     <input type="text" name="file" class="form-control" placeholder="File name...">
                                     <b>Enter data column name</b>
-                                    <input type="text" name="data" class="form-control p-t-20" placeholder="Data column...">
+                                    <input type="text" name="data" class="form-control p-t-20"
+                                           placeholder="Data column...">
                                     <b>Enter date column name</b>
-                                    <input type="text" name="date" class="form-control p-t-20" placeholder="Date column...">
+                                    <input type="text" name="date" class="form-control p-t-20"
+                                           placeholder="Date column...">
                                     <div class="col-md-6 col-4 align-self-center">
-                                        <button class="btn pull-right hidden-sm-down btn-success" type="submit">Load</button>
+                                        <button class="btn pull-right hidden-sm-down btn-success" type="submit">Load
+                                        </button>
                                     </div>
                                 </form>
 
