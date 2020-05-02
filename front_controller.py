@@ -4,17 +4,16 @@ from bokeh.embed import components
 from bokeh.resources import INLINE
 from flask import Flask, render_template, redirect, url_for, request
 from pandas.io.parsers import read_csv
+from statsmodels.tsa.arima_model import ARMA, ARIMA
 from statsmodels.tsa.seasonal import seasonal_decompose
 from statsmodels.tsa.stattools import adfuller
-from statsmodels.tsa.arima_model import ARMA, ARIMA
-from statsmodels.tsa.arima_process import lpol_fiar
 
 import fractal_dimension
 from autocorrelation import get_acf, get_pacf
 from figure_converter import get_figure, get_single_figure, get_multi_figure
 from frac_diff import ts_differencing
+from fractal_difference import fracDiff
 from hurst import hurst
-
 
 app = Flask(__name__)
 
@@ -257,7 +256,7 @@ def arfima():
     q = int(request.form['ma'])
 
     global time_series
-    fractal_diff = ts_differencing(time_series[information_column], d, 4)
+    fractal_diff = fracDiff(time_series, d)
     fractal_diff.dropna(inplace=True)
 
     # Create Training and Test
@@ -278,18 +277,33 @@ def arfima():
 
     forecasts, stderr, conf_int = res.forecast(15, alpha=0.05)
 
-    fractal_forecast = ts_differencing(pd.Series(forecasts), -0.85, 4)
-    fractal_diff_return = ts_differencing(pd.Series(fractal_diff), -0.85, 4)
+    forecast_seruies = pd.Series(forecasts)
+    fractal_forecast = fracDiff(forecast_seruies, -0.85)
+    fractal_diff_return = fracDiff(pd.Series(fractal_diff), -0.85)
     fractal_forecast.dropna(inplace=True)
 
+
+    # test = pd.Series(time_series[information_column][0:4]).append(fractal_diff)
+    test = pd.Series(fractal_diff)
+    result = ts_differencing(pd.Series(test), -0.85, 4)
+
+
     # figure = get_multi_figure(time_series[information_column], time_series[date_column], prediction, 'ARIMA')
+    # figure = get_multi_figure(list(range(0, train.size)),
+    #                           list(range(train.size, time_series[information_column].size)),
+    #                           list(range(train.size, time_series[information_column].size)),
+    #                           result[:len(time_series[information_column]) - 15],
+    #                           # fractal_diff,
+    #                           time_series[information_column][len(time_series[information_column]) - 15:],
+    #                           fractal_forecast, 'ARFIMA')
+
     figure = get_multi_figure(list(range(0, train.size)),
-                              list(range(train.size, time_series[information_column].size)),
-                              list(range(train.size, time_series[information_column].size)),
-                              time_series[information_column][:len(time_series[information_column]) - 15],
+                              list(range(0, train.size)),
+                              list(range(0, train.size)),
+                              result[:len(time_series[information_column]) - 15],
                               # fractal_diff,
-                              time_series[information_column][len(time_series[information_column]) - 15:],
-                              fractal_forecast, 'ARFIMA')
+                              time_series[information_column][: len( time_series[information_column]) - 15],
+                              fractal_diff, 'ARFIMA')
     script, div = components(figure)
 
     js_resources = INLINE.render_js()
