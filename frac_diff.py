@@ -17,11 +17,7 @@ def getWeights(d, lags):
     # for real orders d and up to lags coefficients
     w = [1]
     for k in range(1, lags):
-        # w.append(-w[-1] * ((d - k + 1)) / k)
-        if d > 0 :
-            w.append(-w[-1] * ((d - k + 1)) / k)
-        else :
-            w.append(w[-1] * ((d + k - 1)) / k)
+        w.append(-w[-1] * ((d - k + 1)) / k)
     w = np.array(w).reshape(-1, 1)
     return w
 
@@ -52,7 +48,7 @@ def ts_differencing(series, order, lag_cutoff):
     res = 0
     for k in range(lag_cutoff):
         res += weights[k] * series.shift(k).fillna(0)
-    return res[lag_cutoff:]
+    return res
 
 
 def plotMemoryVsCorr(result, seriesName):

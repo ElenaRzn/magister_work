@@ -256,7 +256,8 @@ def arfima():
     q = int(request.form['ma'])
 
     global time_series
-    fractal_diff = fracDiff(time_series, d)
+    # fractal_diff = fracDiff(time_series[information_column], d)
+    fractal_diff = ts_differencing(time_series[information_column], d, len(time_series))
     fractal_diff.dropna(inplace=True)
 
     # Create Training and Test
@@ -278,32 +279,27 @@ def arfima():
     forecasts, stderr, conf_int = res.forecast(15, alpha=0.05)
 
     forecast_seruies = pd.Series(forecasts)
-    fractal_forecast = fracDiff(forecast_seruies, -0.85)
-    fractal_diff_return = fracDiff(pd.Series(fractal_diff), -0.85)
-    fractal_forecast.dropna(inplace=True)
-
-
-    # test = pd.Series(time_series[information_column][0:4]).append(fractal_diff)
-    test = pd.Series(fractal_diff)
-    result = ts_differencing(pd.Series(test), -0.85, 4)
-
+    fractal_forecast = ts_differencing(forecast_seruies, -0.85, len(forecast_seruies))
+    # fractal_diff_return = fracDiff(fractal_diff, -0.85)
+    fractal_diff_return = ts_differencing(train.append(forecast_seruies), -0.85, len(fractal_diff)+15)
+    # fractal_forecast.dropna(inplace=True)
 
     # figure = get_multi_figure(time_series[information_column], time_series[date_column], prediction, 'ARIMA')
-    # figure = get_multi_figure(list(range(0, train.size)),
-    #                           list(range(train.size, time_series[information_column].size)),
-    #                           list(range(train.size, time_series[information_column].size)),
-    #                           result[:len(time_series[information_column]) - 15],
-    #                           # fractal_diff,
-    #                           time_series[information_column][len(time_series[information_column]) - 15:],
-    #                           fractal_forecast, 'ARFIMA')
+    figure = get_multi_figure(list(range(0, fractal_diff_return.size)),
+                              list(range(train.size, time_series[information_column].size)),
+                              fractal_diff_return,
+                              time_series[information_column][len(time_series[information_column]) - 15:],
+                              'ARFIMA')
 
-    figure = get_multi_figure(list(range(0, train.size)),
-                              list(range(0, train.size)),
-                              list(range(0, train.size)),
-                              result[:len(time_series[information_column]) - 15],
-                              # fractal_diff,
-                              time_series[information_column][: len( time_series[information_column]) - 15],
-                              fractal_diff, 'ARFIMA')
+    # figure = get_multi_figure(list(range(0, train.size)),
+    #                           list(range(0, train.size)),
+    #                           list(range(0, train.size)),
+    #                           fractal_diff_return,
+    #                           # fractal_diff,
+    #                           fractal_diff,
+    #                           time_series[information_column][: len( time_series[information_column]) - 15],
+    #                           'ARFIMA'
+    #                           )
     script, div = components(figure)
 
     js_resources = INLINE.render_js()

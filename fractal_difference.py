@@ -29,43 +29,19 @@ quandl.ApiConfig.api_key = os.environ.get('quandl_api_key')
 
 
 # def fracDiff(series, d, threshold=1e-5):
-def fracDiff(series, d, threshold=1e-3):
+def fracDiff(series, d, threshold=0):
     # compute weights using function above
     weights = findWeights_FFD(d, len(series), threshold)
     width = len(weights) - 1
 
-    df = []
-    # for each series to be differenced, apply weights to appropriate prices and save
-    for name in series.columns:
-        if name == 'Month' :
-            continue
+    # forward fill through unavailable prices and create a temporary series to hold values
+    curr_series = series.fillna(method='ffill').dropna()
+    df_temp = pd.Series()
+    i = 0;
 
-        # forward fill through unavailable prices and create a temporary series to hold values
-        curr_series = series[[name]].fillna(method='ffill').dropna()
-        df_temp = pd.Series()
-        i = 0;
-
-        # loop through all values that fall into range to be fractionally differenced
-        for iloc1 in range(width, curr_series.shape[0]):
-
-            # set values for first and last time-series point to be used in current pass of fractional
-            # difference
-            loc0 = curr_series.index[iloc1 - width]
-            loc1 = curr_series.index[iloc1]
-
-            # make sure current value is valid
-            if not np.isfinite(curr_series.loc[loc1, name]):
-                continue
-
-            # dot product of weights with values from first and last indices
-            # df_temp[loc1] = np.dot(weights.T, curr_series.loc[loc0:loc1])[0, 0]
-            df_temp = df_temp._set_value(i, np.dot(weights.T, curr_series.loc[loc0:loc1])[0, 0])
-            i = i + 1
-            # df_temp = np.npdot(weights.T, curr_series.loc[loc0:loc1])[0, 0]
-
-        # df[name] = df_temp.copy(deep=True)
-        # df.add(df_temp.copy())
-    # df = pd.concat(df, axis=1)
+    # for every value in the original series
+    for i in range(0, len(curr_series) - 1):
+        df_temp = df_temp._set_value(i, np.dot(weights[0:len(curr_series) - i].T, curr_series.loc[i:len(curr_series) - 1])[0])
 
     return df_temp
 

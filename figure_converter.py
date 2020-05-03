@@ -111,6 +111,45 @@ def get_multi_figure(x1, x2, x3, y1, y2, y3, text):
     return p
 
 
+def get_multi_figure(x1, x2, y1, y2, text):
+    window_size = 50
+
+    # output to static HTML file
+    output_file("multi.html", title="vacation.py example")
+
+    # create a new plot with a a datetime axis type
+    p = figure(width=800, height=350)
+
+    # add renderers
+    # source = ColumnDataSource(data=dict(
+    #     x=dates,
+    #     y1=infos,
+    #     y2=model,
+    # ))
+
+    # p.vline_stack(x='x', y=['y1', 'y2'], source=source, color=["firebrick", "navy"])
+    r = p.multi_line(xs=[x1, x2], ys=[y1, y2],
+                 color=['blue', 'green'])
+    legend = Legend(items=[
+        LegendItem(label="model", renderers=[r], index=0),
+        LegendItem(label="actual", renderers=[r], index=1),
+    ])
+    p.add_layout(legend)
+
+    # NEW: customize by setting attributes
+    p.title.text = text
+    p.grid.grid_line_alpha = 0
+    p.xaxis.axis_label = 'Date'
+    p.yaxis.axis_label = 'Value'
+    p.ygrid.band_fill_color = "olive"
+    p.ygrid.band_fill_alpha = 0.1
+    p.width_policy = 'max'
+    p.height_policy = 'max'
+
+    # show the results
+    return p
+
+
 def get_single_chart(data, text):
     # output to static HTML file
     output_file("vacation.html", title="vacation.py example")
