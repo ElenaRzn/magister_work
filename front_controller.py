@@ -10,7 +10,7 @@ from statsmodels.tsa.stattools import adfuller
 
 import fractal_dimension
 from autocorrelation import get_acf, get_pacf
-from figure_converter import get_figure, get_single_figure, get_multi_figure
+from figure_converter import get_figure, get_single_figure, get_multi_figure, get_multi_figure2
 from frac_diff import ts_differencing
 from fractal_difference import fracDiff
 from hurst import hurst
@@ -230,7 +230,7 @@ def arima():
 
     forecasts, stderr, conf_int = res.forecast(15, alpha=0.05)
     # figure = get_multi_figure(time_series[information_column], time_series[date_column], prediction, 'ARIMA')
-    figure = get_multi_figure(list(range(0, train.size)), list(range(train.size, time_series[information_column].size)),
+    figure = get_multi_figure2(list(range(0, train.size)), list(range(train.size, time_series[information_column].size)),
                               list(range(train.size, time_series[information_column].size)),
                               train, test, forecasts, 'ARIMA')
     script, div = components(figure)
@@ -279,9 +279,9 @@ def arfima():
     forecasts, stderr, conf_int = res.forecast(15, alpha=0.05)
 
     forecast_seruies = pd.Series(forecasts)
-    fractal_forecast = ts_differencing(forecast_seruies, -0.85, len(forecast_seruies))
+    fractal_forecast = ts_differencing(forecast_seruies, -d, len(forecast_seruies))
     # fractal_diff_return = fracDiff(fractal_diff, -0.85)
-    fractal_diff_return = ts_differencing(train.append(forecast_seruies), -0.85, len(fractal_diff)+15)
+    fractal_diff_return = ts_differencing(train.append(forecast_seruies), -d, len(fractal_diff)+15)
     # fractal_forecast.dropna(inplace=True)
 
     # figure = get_multi_figure(time_series[information_column], time_series[date_column], prediction, 'ARIMA')
@@ -291,7 +291,7 @@ def arfima():
                               time_series[information_column][len(time_series[information_column]) - 15:],
                               'ARFIMA')
 
-    # figure = get_multi_figure(list(range(0, train.size)),
+    # figure = get_multi_figure2(list(range(0, train.size)),
     #                           list(range(0, train.size)),
     #                           list(range(0, train.size)),
     #                           fractal_diff_return,

@@ -35,6 +35,8 @@ def hurst(X):
     R_S = R_S[~np.isnan(R_S)]
     n = np.log(T)[2:]
     A = np.column_stack((n, np.ones(n.size)))
+    if A.size != R_S.size * 2 :
+        R_S = R_S[1:]
     [m, c] = np.linalg.lstsq(A, R_S)[0]
     H = m
     return H

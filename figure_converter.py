@@ -71,7 +71,7 @@ def get_single_figure(data, text):
     return p
 
 
-def get_multi_figure(x1, x2, x3, y1, y2, y3, text):
+def get_multi_figure2(x1, x2, x3, y1, y2, y3, text):
     window_size = 50
 
     # output to static HTML file
