@@ -22,23 +22,6 @@ def getWeights(d, lags):
     return w
 
 
-def plotWeights(dRange, lags, numberPlots):
-    weights = pd.DataFrame(np.zeros((lags, numberPlots)))
-    interval = np.linspace(dRange[0], dRange[1], numberPlots)
-    for i, diff_order in enumerate(interval):
-        weights[i] = getWeights(diff_order, lags)
-    weights.columns = [round(x, 2) for x in interval]
-    fig = weights.plot()
-    plt.legend(title='Order of differencing')
-    plt.title('Lag coefficients for various orders of differencing')
-    plt.xlabel('lag coefficients')
-    # plt.grid(False)
-    plt.show()
-
-
-plotWeights([0, 1], 7, 6)
-
-
 def ts_differencing(series, order, lag_cutoff):
     # return the time series resulting from (fractional) differencing
     # for real orders order up to lag_cutoff coefficients
@@ -49,24 +32,6 @@ def ts_differencing(series, order, lag_cutoff):
     for k in range(lag_cutoff):
         res += weights[k] * series.shift(k).fillna(0)
     return res
-
-
-def plotMemoryVsCorr(result, seriesName):
-    fig, ax = plt.subplots()
-    ax2 = ax.twinx()
-    color1 = 'xkcd:deep red';
-    color2 = 'xkcd:cornflower blue'
-    ax.plot(result.order, result['adf'], color=color1)
-    ax.plot(result.order, result['5%'], color='xkcd:slate')
-    ax2.plot(result.order, result['corr'], color=color2)
-    ax.set_xlabel('order of differencing')
-    ax.set_ylabel('adf', color=color1);
-    ax.tick_params(axis='y', labelcolor=color1)
-    ax2.set_ylabel('corr', color=color2);
-    ax2.tick_params(axis='y', labelcolor=color2)
-    plt.title('ADF test statistics and correlation for %s' % (seriesName))
-    plt.show()
-
 
 from statsmodels.tsa.stattools import adfuller
 
@@ -85,5 +50,5 @@ def memoryVsCorr(series, dRange, numberPlots, lag_cutoff, seriesName):
         result.loc[counter, 'adf'] = res[0]
         result.loc[counter, '5%'] = res[4]['5%']
         result.loc[counter, 'corr'] = np.corrcoef(series[lag_cutoff:].fillna(0), seq_traf)[0, 1]
-    plotMemoryVsCorr(result, seriesName)
+    # plotMemoryVsCorr(result, seriesName)
     return result
