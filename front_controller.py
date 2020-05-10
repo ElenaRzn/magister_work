@@ -44,7 +44,7 @@ def index():
         plot_script=script,
         plot_div=div,
         js_resources=js_resources,
-        file_name='test'
+        file_name='Time Series'
     )
     # return encode_utf8(html)
     return html
@@ -94,7 +94,7 @@ def decompose():
         plot_resid=div_resid,
         plot_observed=div_observed,
         js_resources=js_resources,
-        file_name="test"
+        file_name="Time Series Decomposition"
     )
     return html
 
@@ -325,6 +325,10 @@ def fractal():
         hfd = hfd
     )
     return html
+
+@app.route('/save', methods=['POST'])
+def save():
+    return redirect(url_for('index'))
 
 if __name__ == '__main__':
     app.run(debug=True)

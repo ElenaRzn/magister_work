@@ -92,15 +92,15 @@
             <nav class="sidebar-nav">
                 <ul id="sidebarnav">
                     <li>
-                        <a href="{{ url_for('index') }}" class="waves-effect"><i class="fa fa-clock-o m-r-10"
+                        <a href="{{ url_for('home') }}" class="waves-effect"><i class="fa fa-folder-open-o m-r-10"
+                                                                             aria-hidden="true"></i>Import</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('index') }}" class="waves-effect"><i class="fa fa-bar-chart-o m-r-10"
                                                                                  aria-hidden="true"></i>Dashboard</a>
                     </li>
                     <li>
-                        <a href="table-basic.html" class="waves-effect"><i class="fa fa-table m-r-10"
-                                                                           aria-hidden="true"></i>Data</a>
-                    </li>
-                    <li>
-                        <a href="{{ url_for('decompose') }}" class="waves-effect"><i class="fa fa-info-circle m-r-10"
+                        <a href="{{ url_for('decompose') }}" class="waves-effect"><i class="fa fa-bars m-r-10"
                                                                                      aria-hidden="true"></i>Decompose</a>
                     </li>
                     <li>
@@ -108,22 +108,23 @@
                                                                                    aria-hidden="true"></i>Fractal</a>
                     </li>
                     <li>
-                        <a href="{{ url_for('stationary') }}" class="waves-effect"><i class="fa fa-columns m-r-10"
+                        <a href="{{ url_for('stationary') }}" class="waves-effect"><i class="fa fa-question m-r-10"
                                                                                       aria-hidden="true"></i>Stationary</a>
                     </li>
                     <li>
-                        <a href="{{ url_for('model') }}" class="waves-effect"><i class="fa fa-columns m-r-10"
+                        <a href="{{ url_for('model') }}" class="waves-effect"><i class="fa fa-circle m-r-10"
                                                                                  aria-hidden="true"></i>ARIMA Model</a>
                     </li>
                     <li>
-                        <a href="{{ url_for('fract_model') }}" class="waves-effect"><i class="fa fa-columns m-r-10"
+                        <a href="{{ url_for('fract_model') }}" class="waves-effect"><i class="fa fa-certificate m-r-10"
                                                                                        aria-hidden="true"></i>ARFIMA
                             Model</a>
                     </li>
+                    <li>
+                        <a href="{{ url_for('save') }}" class="waves-effect"><i class="fa  fa-save m-r-10"
+                                                                                       aria-hidden="true"></i>Save</a>
+                    </li>
                 </ul>
-                <div class="text-center m-t-30">
-                    <a href="https://wrappixel.com/templates/monsteradmin/" class="btn btn-danger"> Save</a>
-                </div>
             </nav>
             <!-- End Sidebar navigation -->
         </div>
@@ -145,10 +146,10 @@
             <!-- ============================================================== -->
             <div class="row page-titles">
                 <div class="col-md-6 col-8 align-self-center">
-                    <h3 class="text-themecolor m-b-0 m-t-0">Dashboard</h3>
+                    <h3 class="text-themecolor m-b-0 m-t-0">Decompose</h3>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                        <li class="breadcrumb-item active">Dashboard</li>
+                        <li class="breadcrumb-item active">Decompose</li>
                     </ol>
                 </div>
                 <div class="col-md-6 col-4 align-self-center">
