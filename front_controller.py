@@ -44,7 +44,8 @@ def index():
         plot_script=script,
         plot_div=div,
         js_resources=js_resources,
-        file_name='Time Series'
+        file_name='Time Series',
+        description = time_series.describe
     )
     # return encode_utf8(html)
     return html
@@ -323,6 +324,16 @@ def fractal():
         hurst = hurst_exp,
         pfd = pfd,
         hfd = hfd
+    )
+    return html
+
+@app.route('/preview', methods=['POST'])
+def preview():
+    ts = read_csv(request.form['file'], parse_dates=True)
+    view = ts.head()
+    html = render_template(
+        'home.html',
+        preview=view
     )
     return html
 

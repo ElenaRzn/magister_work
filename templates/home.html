@@ -168,6 +168,22 @@
                             <div class="flot-chart">
                                 Welcome to the Time Series Analyser!
                                 To start your work load the file...
+                                <form class="app-search p-l-20 p-t-20" method="post" action="/preview">
+                                    <b>Enter .csv file name</b>
+                                    <input type="text" name="file" class="form-control" placeholder="File name...">
+
+                                    <div class="col-md-6 col-4 align-self-center">
+                                        <button class="btn pull-right hidden-sm-down btn-success" type="submit">Preview
+                                        </button>
+                                    </div>
+                                </form>
+
+                                <pre class="app-search p-l-20 p-t-20">
+
+                                    {{ preview }}
+
+                                </pre>
+
                                 <form class="app-search p-l-20 p-t-20" method="post" action="/load">
                                     <b>Enter .csv file name</b>
                                     <input type="text" name="file" class="form-control" placeholder="File name...">
