@@ -30,7 +30,7 @@ def get_figure(infos, dates):
     p = figure(width=800, height=350, x_axis_type="datetime")
 
     # add renderers
-    p.line(dates, infos, color='darkgrey')
+    p.line(dates, infos, color='black')
 
     # NEW: customize by setting attributes
     p.title.text = "vacation"
@@ -55,7 +55,7 @@ def get_single_figure(data, text):
     p = figure(width=800, height=350, x_axis_type="datetime")
 
     # add renderers
-    p.line(list(range(0, data.size)), data, color='darkgrey')
+    p.line(list(range(0, data.size)), data, color='black')
 
     # NEW: customize by setting attributes
     p.title.text = text

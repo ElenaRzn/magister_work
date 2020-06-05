@@ -15,6 +15,7 @@ from frac_diff import ts_differencing
 from fractal_difference import fracDiff
 from hurst import hurst
 
+# https://habr.com/ru/post/353234/
 app = Flask(__name__)
 
 fig = []
@@ -38,7 +39,7 @@ def index():
     js_resources = INLINE.render_js()
 
     # render template
-    script, div = components(fig[0])
+    script, div = components(get_figure(np.array(time_series[information_column]), list(range(0, time_series[information_column].size))))
     html = render_template(
         'index.html',
         plot_script=script,
@@ -61,7 +62,10 @@ def load():
     global date_column
     date_column = request.form['date']
     global fig
-    fig.append(get_figure(np.array(time_series[information_column]), np.array(time_series[date_column], dtype=np.datetime64)))
+    if date_column != "" :
+        fig.append(get_figure(np.array(time_series[information_column]), np.array(time_series[date_column], dtype=np.datetime64)))
+    else :
+        fig.append(get_figure(np.array(time_series[information_column]), list(range(0, time_series[information_column].size))))
     return redirect(url_for('index'))
 
 
@@ -113,6 +117,7 @@ def stationary(integer_diff, log_diff):
     elif log_diff is not None:
         to_analyse = time_series['log_diff']
     else:
+        # TODO разобраться, что тут с фрактальным интегрированием
         to_analyse = time_series[information_column]
 
     time_series['result'] = to_analyse
@@ -154,7 +159,7 @@ def log():
     global time_series
     time_series["log_diff"] = np.log(time_series[information_column])
     time_series.dropna(inplace=True)
-    return redirect(url_for('stationary', log_deff=True))
+    return redirect(url_for('stationary', log_diff=True))
 
 
 @app.route('/fract', methods=['POST'])
@@ -168,7 +173,7 @@ def fract():
 @app.route('/accept', methods=['POST'])
 def accept():
     global time_series
-    time_series[information_column] = time_series['result']
+    time_series[information_column] = time_series['integer_diff']
     return redirect(url_for('index'))
 
 
@@ -213,9 +218,11 @@ def arima():
     d = int(request.form['integrate'])
     q = int(request.form['ma'])
 
+    predict_count = 15
+
     # Create Training and Test
-    train = time_series[information_column][:len(time_series[information_column]) - 15]
-    test = time_series[information_column][len(time_series[information_column]) - 15:]
+    train = time_series[information_column][:len(time_series[information_column]) - predict_count]
+    test = time_series[information_column][len(time_series[information_column]) - predict_count:]
 
     mod = ARIMA(train, order=(p, d, q))
 
@@ -229,7 +236,7 @@ def arima():
 
     # prediction = res.predict(start=len(time_series[information_column]), end=len(time_series[information_column]) + 10)
 
-    forecasts, stderr, conf_int = res.forecast(15, alpha=0.05)
+    forecasts, stderr, conf_int = res.forecast(predict_count, alpha=0.05)
     # figure = get_multi_figure(time_series[information_column], time_series[date_column], prediction, 'ARIMA')
     figure = get_multi_figure2(list(range(0, train.size)), list(range(train.size, time_series[information_column].size)),
                               list(range(train.size, time_series[information_column].size)),
@@ -256,14 +263,16 @@ def arfima():
     d = float(request.form['integrate'])
     q = int(request.form['ma'])
 
+    predict_count = 15
+
     global time_series
     # fractal_diff = fracDiff(time_series[information_column], d)
     fractal_diff = ts_differencing(time_series[information_column], d, len(time_series))
     fractal_diff.dropna(inplace=True)
 
     # Create Training and Test
-    train = fractal_diff[:len(fractal_diff) - 15]
-    test = fractal_diff[len(fractal_diff) - 15:]
+    train = fractal_diff[:len(fractal_diff) - predict_count]
+    test = fractal_diff[len(fractal_diff) - predict_count:]
 
     mod = ARMA(train, order=(p, q))
 
@@ -277,19 +286,19 @@ def arfima():
 
     # prediction = res.predict(start=len(time_series[information_column]), end=len(time_series[information_column]) + 10)
 
-    forecasts, stderr, conf_int = res.forecast(15, alpha=0.05)
+    forecasts, stderr, conf_int = res.forecast(predict_count, alpha=0.05)
 
     forecast_seruies = pd.Series(forecasts)
     fractal_forecast = ts_differencing(forecast_seruies, -d, len(forecast_seruies))
     # fractal_diff_return = fracDiff(fractal_diff, -0.85)
-    fractal_diff_return = ts_differencing(train.append(forecast_seruies), -d, len(fractal_diff)+15)
+    fractal_diff_return = ts_differencing(train.append(forecast_seruies), -d, len(fractal_diff)+predict_count)
     # fractal_forecast.dropna(inplace=True)
 
     # figure = get_multi_figure(time_series[information_column], time_series[date_column], prediction, 'ARIMA')
     figure = get_multi_figure(list(range(0, fractal_diff_return.size)),
                               list(range(train.size, time_series[information_column].size)),
                               fractal_diff_return,
-                              time_series[information_column][len(time_series[information_column]) - 15:],
+                              time_series[information_column][len(time_series[information_column]) - predict_count:],
                               'ARFIMA')
 
     # figure = get_multi_figure2(list(range(0, train.size)),
